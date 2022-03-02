@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>네이버 : 회원가입</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    body {
+      font-family: Dotum,'돋움',Helvetica,sans-serif;
+      background: #f0f0f0;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      border: solid 1px #dadada;
+      padding: 10px 14px 10px 14px;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .sub-title {
+      font-size: 12px;
+      font-weight: 400;
+      color: #8e8e8e;
+    }
+
+    .label-margin {
+      margin: 19px 0 8px;
+    }
+
+    .gray-border {
+      border: solid 1px #dadada;
+    }
+
+    .grn-btn {
+      background: #03c75a;
+      color: white;
+      height: 40px;
+      border: none;
+    }
+
+    .logo {
+      width: 165px;
+      height: 32px;
+    }
+
+    .content {
+      width: 460px;
+    }
+  </style>
+</head>
+<body>
+  <div style="display: flex; justify-content: center;">
+    <img src="https://ssl.pstatic.net/static/nid/join/m_logo_naver.png" alt="로고" class="logo">
+  </div>
+  <div class="content">
+    <div class="label-margin">
+      <label for="id">아이디</label>
+    </div>
+    <input type="text" id="id" name="id">
+    <div class="label-margin">
+      <label for="pswd1">비밀번호</label>
+    </div>
+    <input type="password" id="pswd1" name="pswd1">
+    <div class="label-margin">
+      <label for="pswd2">비밀번호 재확인</label>
+    </div>
+    <input type="password" id="pswd2" name="pswd2">
+    <div class="label-margin">
+      <label for="name">이름</label>
+    </div>
+    <input type="text" id="name" name="name">
+    <div class="label-margin">
+      <label for="yy">생년월일</label>
+    </div>
+    <input type="text" id="yy" name="yy" placeholder="년(4자)" style="width: 147px;">
+    <select name="mm" id="mm" style="width: 147px; height: 40px; border: solid 1px #dadada; padding-left: 10px;">
+      <option value="" selected>월</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+    <input type="text" id="dd" name="dd" placeholder="일" style="width: 147px;">
+    <div class="label-margin">
+      <label for="gender">성별</label>
+    </div>
+    <select name="gender" id="gender" class="gray-border" style="width: 100%; height: 40px; padding-left: 10px;">
+      <option value="" selected>성별</option>
+      <option value="M">남자</option>
+      <option value="F">여자</option>
+      <option value="U">선택 안함</option>
+    </select>
+    <div class="label-margin">
+      <label for="email">본인 확인 이메일<span class="sub-title">(선택)</span></label>
+    </div>
+    <input type="email" id="email" name="email" placeholder="선택입력">
+    <div class="label-margin">
+      <label for="phoneNo">휴대전화</label>
+    </div>
+    <div style="display: flex; flex-direction: column; row-gap: 10px;">
+      <select name="nationNo" id="nationNo" class="gray-border" style="width: 100%; height: 40px; padding-left: 10px;">
+        <option value="233">가나 +233</option>
+        <option value="241">가봉 +241</option>
+        <option value="82" selected>대한민국 +82</option>
+        <option value="852">홍콩 +852</option>
+      </select>
+      <div>
+        <input type="tel" id="phoneNo" name="phoneNo" placeholder="전화번호 입력" style="width: 335px;">
+        <button class="grn-btn" style="width: 115px;">인증번호 받기</button>
+      </div>
+      <input type="number" id="authNo" name="authNo" placeholder="인증번호 입력하세요" maxlength="4" disabled>
+    </div>
+    <button class="grn-btn" style="width: 100%; margin-top: 30px;">가입하기</button>
+  </div>
+</body>
+</html>
