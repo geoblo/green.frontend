@@ -1,0 +1,73 @@
+1. input type submit은 form 태그안의 데이터를 전송해준다.
+(button 태그에서도 동일하게 사용가능하므로 버튼 태그를 쓰도록 하자!)
+
+2. 모든 태그는 트리 구조로 나타낼 수 있다. (DOM Tree)
+> : 자손(바로 밑에 자식만) 선택
+공백 : 후손(자식을 포함한 모든 것들) 선택
+
+3. 테이블 태그 선택 시 주의사항
+table > tr > th 일 때 정상적으로 선택 안됨
+tbody가 숨겨져있음!!!
+
+4. 동위 선택자 (형제관계)
++ : 형제중에 바로 뒤에 위치하는 것
+~ : 형제중에 뒤에 위치하는 것들
+
+5. 반응 선택자
+:hover
+:active
+
+6. 상태 선택자
+:enabled
+:disabled
+:focus - 웹 페이지 하나당 하나의 input 태그에만 초점을 맞출 수 있음
+:checked - for input type checkbox, radio
+
+7. 구조 선택자
+1) 일반 구조 선택자: 형제 관계 안에서 적용, 태그 형태 구분없이 형제중에서 첫번째부터 검색
+:first-child
+:last-child
+:nth-child(숫자 또는 수열)
+:nth-last-child(숫자 또는 수열)
+
+2) 형태 구조 선택자: 일반 구조 선택자와 비슷하지만 태그 형태를 구분
+
+8. 문자 선택자
+::first-letter
+::first-line
+::before - content 라는 css 속성과 같이 많이 쓰임
+::after - content 라는 css 속성과 같이 많이 쓰임
+::selection - 드래그한 글자 선택
+
+9. 태그 안에 사용자 정의 속성(data-)
+10. counter-increment css속성: css selector가 발생할때마다 1씩 카운팅
+11. css함수
+CSS counter() Function
+CSS attr() Function
+
+12. 링크 선택자
+:link
+:visited
+
+13. 부정 선택자
+:not(선택자) - 선택자가 아닌 것들을 선택..
+
+14. 크기 단위
+The default text size in browsers is 16px. So, the default size of 1em is 16px.
+1) 절대 크기(px)
+2) 상대 크기(%, em, rem)
+%: 부모 엘리먼트 기준으로
+em: 현재 엘리먼트 기준으로
+rem: root 엘리먼트 기준으로
+
+15. css에서 이미지 파일이나 폰트 파일을 불러올 때는 URL 단위를 쓴다?
+코딩할때는 절대 경로를 쓰는 경우가 99% 없다.
+이유? 서버에서 시작 위치를 보장할 수 없는데 절대 경로를 써버리면 오류가 날 가능성이 있음
+
+/ : (서버의)루트폴더
+./ 또는 생략 : 현재폴더
+../ : 상위폴더
+
+
+
+
