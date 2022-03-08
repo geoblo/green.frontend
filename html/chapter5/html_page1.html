@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* 초기화 코드 */
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      border: 0;
+    }
+
+    /* 헤더 */
+    #main_header {
+      /* 중앙정렬 */
+      width: 960px;
+      margin: 0 auto;
+
+      /* 자식이 absolute 일때 부모는 relative */
+      position: relative;
+      height: 160px;
+    }
+
+    #main_header > #title {
+      position: absolute;
+      left: 20px;
+      top: 30px;
+    }
+
+    #main_header > #main_gnb {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    
+    #main_header > #main_lnb {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    /* 타이틀 */
+    #title {
+      font-family: 'Fredoka', serif;
+    }
+
+    /* gnb */
+    #main_gnb > ul {
+      overflow: hidden;
+    }
+    #main_gnb > ul > li {
+      float: left;
+    }
+    #main_gnb > ul > li > a {
+      /* 패딩 위아래는 먹는데 border를 먹이기 위해 block 태그로 변경 */
+      display: block;
+      padding: 2px 10px;
+      border: 1px solid black;
+    }
+    #main_gnb > ul > li > a:hover {
+      background: black;
+      color: white;
+    }
+    #main_gnb > ul > li:first-child > a {
+      border-radius: 10px 0 0 10px;
+    }
+    #main_gnb > ul > li:last-child > a {
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* lnb */
+    #main_lnb > ul {
+      overflow: hidden;
+    }
+    #main_lnb > ul > li {
+      float: left;
+    }
+    #main_lnb > ul > li > a {
+      /* 패딩 위아래는 먹는데 border를 먹이기 위해 block 태그로 변경 */
+      display: block;
+      padding: 10px 20px;
+      /* margin: 10px 20px; */
+      border: 1px solid black;
+    }
+    #main_lnb > ul > li > a:hover {
+      background: black;
+      color: white;
+    }
+    #main_lnb > ul > li:first-child > a {
+      border-radius: 10px 0 0 10px;
+    }
+    #main_lnb > ul > li:last-child > a {
+      border-radius: 0 10px 10px 0;
+    }
+
+    /* 콘텐츠 */
+    #content {
+      /* 중앙정렬 */
+      width: 960px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    #content > #main_section {
+      width: 750px;
+      float: left;
+    }
+
+    #content > #main_aside {
+      width: 200px;
+      float: right;
+    }
+
+    /* 본문 */
+    #main_section > article.main_article {
+      margin-bottom: 10px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    /* 사이드 */
+    /* 첫 번째 탭 */
+    input:nth-of-type(1) {
+      display: none;
+    }
+    input:nth-of-type(1) ~ div:nth-of-type(1) { 
+      display: none; 
+    }
+    input:nth-of-type(1):checked ~ div:nth-of-type(1) { 
+      display: block;
+    }
+
+    /* 두 번째 탭 */
+    input:nth-of-type(2) {
+      display: none;
+    }
+    input:nth-of-type(2) ~ div:nth-of-type(2) {
+      display: none; 
+    }
+    input:nth-of-type(2):checked ~ div:nth-of-type(2) { 
+      display: block; 
+    }
+
+    /* 탭 모양 구성 */
+    section.buttons {
+      overflow: hidden;
+    }
+    section.buttons > label {
+      display: block;
+      float: left;
+
+      width: 100px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+
+      box-sizing: border-box;
+      border: 1px solid black;
+
+      background: black;
+      color: white;
+    }
+
+    input:nth-of-type(1):checked ~ section.buttons >  label:nth-of-type(1) {
+      background: white;
+      color: black;
+    }
+    input:nth-of-type(2):checked ~ section.buttons >  label:nth-of-type(2) {
+      background: white;
+      color: black;
+    }
+
+    /* 목록 */
+    .item {
+      overflow: hidden;
+      padding: 10px;
+      border: 1px solid black;
+      border-top: none;
+    }
+
+    .thumbnail {
+      float: left;
+    }
+
+    .description {
+      float: left;
+      margin-left: 10px;
+    }
+
+    .description > strong {
+      display: block;
+      width: 120px;
+
+      /* ... 말줄임표 */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* 푸터 */
+    #main_footer {
+      /* 중앙 정렬 */
+      width: 960px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+
+      /* 테두리 */
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid black;
+
+      /* 글자 정렬 */
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header id="main_header">
+    <div id="title">
+      <h1>Rint Development</h1>
+      <h2>html5 + css3 basic</h2>
+    </div>
+    <nav id="main_gnb">
+      <ul>
+        <li><a href="#">web</a></li>
+        <li><a href="#">mobile</a></li>
+        <li><a href="#">game</a></li>
+        <li><a href="#">simulation</a></li>
+        <li><a href="#">data</a></li>
+      </ul>
+    </nav>
+    <nav id="main_lnb">
+      <ul>
+        <li><a href="#">html5</a></li>
+        <li><a href="#">css3</a></li>
+        <li><a href="#">javascript</a></li>
+        <li><a href="#">jquery</a></li>
+        <li><a href="#">node.js</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="content">
+    <section id="main_section">
+      <article class="main_article">
+        <h1>Main Article</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, beatae? Ab nisi perferendis, qui saepe voluptatum, nobis quae dolor magni quam illum sequi ipsum eaque consectetur repellat libero, velit praesentium!</p>
+      </article>
+      <article class="main_article">
+        <h1>Main Article</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio facilis est perspiciatis aliquam labore quisquam odit repellat omnis officiis. Cum quae, provident pariatur tempora obcaecati modi illum laudantium dolores eveniet!</p>
+      </article>
+      <article class="main_article">
+        <h1>Main Article</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam eos maxime repellat, ea necessitatibus porro tempora id quasi dolorum vitae corrupti deserunt nemo libero! Saepe tempore vero corporis officia doloribus?</p>
+      </article>
+    </section>
+    <aside id="main_aside">
+      <input type="radio" name="tab" id="first" checked>
+      <input type="radio" name="tab" id="second">
+      <section class="buttons">
+        <label for="first">First</label>
+        <label for="second">Second</label>
+      </section>
+      <div class="tab-item">
+        <ul>
+          <li class="item"><a href="#">
+            <div class="thumbnail">
+              <img src="https://via.placeholder.com/45x45" />
+            </div>
+            <div class="description">
+              <strong>HTML5 Canvas</strong><p>2012-03-15</p>
+            </div>
+          </a></li>
+          <li class="item"><a href="#">
+            <div class="thumbnail">
+              <img src="https://via.placeholder.com/45x45" />
+            </div>
+            <div class="description">
+              <strong>HTML5 Audio</strong><p>2012-03-15</p>
+            </div>
+          </a></li>
+          <li class="item"><a href="#">
+            <div class="thumbnail">
+              <img src="https://via.placeholder.com/45x45" />
+            </div>
+            <div class="description">
+              <strong>HTML5 Video</strong><p>2012-03-15</p>
+            </div>
+          </a></li>
+          <li class="item"><a href="#">
+            <div class="thumbnail">
+              <img src="https://via.placeholder.com/45x45" />
+            </div>
+            <div class="description">
+              <strong>HTML5 Semantic Web</strong><p>2012-03-15</p>
+            </div>
+          </a></li>
+      </ul>
+      </div>
+      <div class="tab-item">
+        <ul>
+          <li class="item"><a href="#">
+              <div class="thumbnail">
+                  <img src="https://via.placeholder.com/45x45" />
+              </div>
+              <div class="description">
+                  <strong>CSS3 Transition</strong><p>2012-03-15</p>
+              </div>
+          </a></li>
+          <li class="item"><a href="#">
+              <div class="thumbnail">
+                  <img src="https://via.placeholder.com/45x45" />
+              </div>
+              <div class="description">
+                  <strong>CSS3 Animation</strong><p>2012-03-15</p>
+              </div>
+          </a></li>
+          <li class="item"><a href="#">
+              <div class="thumbnail">
+                  <img src="https://via.placeholder.com/45x45" />
+              </div>
+              <div class="description">
+                  <strong>CSS3 Border</strong><p>2012-03-15</p>
+              </div>
+          </a></li>
+          <li class="item"><a href="#">
+              <div class="thumbnail">
+                  <img src="https://via.placeholder.com/45x45" />
+              </div>
+              <div class="description">
+                  <strong>CSS3 Box</strong><p>2012-03-15</p>
+              </div>
+          </a></li>
+      </ul>
+      </div>
+    </aside>
+  </div>
+  <footer id="main_footer">
+    <h3>HTML5 + CSS3 Basic</h3>
+    <address>Website Layout Basic</address>
+  </footer>
+</body>
+</html>
