@@ -1,0 +1,129 @@
+1. 스프라이트 이미지 (웹페이지 속도 향상에 도움)
+로우 이미지 (스프라이트 이미지로 합치기 전 오리지널)
+
+*스프라이트 이미지 생성: https://www.toptal.com/developers/css/sprite-generator/
+
+2. 로고 삽입할때 주로 쓰는 방법 
+보통 h1 태그안에 담고 a태그 안에 이미지 태그를 넣음
+(h1 태그 자체에 마진 값을 갖고 있는데 사실 초기화 코드를 넣으면 의미 없음)
+
+3. 가운데 정렬. 반드시 width가 같이 있어야 한다.
+width: 980px;
+margin: 0 auto; <-- 왜 width 값이 있어야 하는지 원리 이해 필요!
+
+4. 자식이 absolute 일때, 부모는 relative + height 값 부여
+position: relative;
+height: 75px;
+
+5. float 사용 시 부모 태그는 반드시 overflow: hidden;
+float 사용시 width 가 넘치지 않도록 주의!
+
+6. 시멘틱 태그
+<figure>: 이미지, 다이어그램, 사진 등 독립적인 콘텐츠 정의시 사용
+
+7. text-align 블록 태그에서만 사용 가능
+
+8. 레이아웃의 종류
+1) Fixed Layout
+고정너비(px)로 구성
+화면 해상도에 상관없이 동일한 너비로 표시
+화면 해상도에 따라 양옆 과도록 공백을 유발할 수 있다.
+
+2) Fluid Layout
+비율(%)로 구성
+화면 해상도에 맞게 일정한 비율로..
+...
+
+3) Adaptive 는 미디어 쿼리에 맞춰서 크기가 딱딱하게 변하는 레이아웃 
+
+9. 반응형: Fluid + Adaptive
+=> 강의노트 참고 사이트 보기!
+
+10. 미디어 쿼리
+개발자 도구에서 show media query로 볼 수 있음!
+PC (min-width: 1024px) 
+/ 태블릿 (min-width: 768px) and (max-width: 1023px) 
+/ 모바일 (max-width: 767px)
+최소 3개의 분기로 나눔! (그리고 최소 320px 부터는 틀어지지 않도록 맞춰주면 좋음)
+
+11. min-width, max-width
+
+12. 가변 그리드 공식1 (같은 비율을 유지하고 싶을때)
+(자식 박스 width / 부모 박스 width) * 100 = 결과값%
+
+13. js 기초
+1) 주석
+/* alt + shift + a */
+// ctrl + /
+
+2) document.write("<h1>안녕하세요!</h1>");
+console.log("로그임");
+
+3) 대소문자를 구분하기 때문에 틀리면 안됨
+4) "", '' 구분없이 씀
+5) ;이 없어도 실행은 되지만 세미콜론을 써주는 것이 무조건 좋다!
+6) 코드는 한줄에 한 문장만!
+
+14. js 변수(변하는 수)
+: 데이터를 담을 수 있는 그릇
+: 메모리 안에 공간을 할당하고 데이터를 넣음
+
+*변수명 지을때 주의점!
+1) _$ 등등만 올 수 있음
+2) 예약어는 쓸 수 없음
+3) 의미있는 명칭을 지을것
+4) 대소문자 구분
+
+14-1. 변수 선언
+1) ES5차
+var: 같은 변수명 사용 가능, 변수 재할당 가능
+ex) js가 유연해서 가능.. 
+var num = 1;
+var num = 1;
+
+2) ES6차
+let: 같은 변수명 사용 불가능, 변수 재할당 가능
+ex) 불가능해짐 
+let num = 1;
+let num = 1;
+
+const: 상수(값이 바뀔 수 없다), 같은 변수명 사용 불가능, 변수 재할당 불가능 
+
+15. 자료형(data type)
+: https://www.w3schools.com/js/js_datatypes.asp
+1) 문자열(string)
+2) 숫자형(number)
+3) 논리형(boolean)
+4) 빈 데이터형(undefined)
+5) 객체형 (object)
+
+*중요! : 숫자 0, null, undefined, 빈문자('', "": empty string), 는 무조건 false이며, 나머지는 모두 true다.
+
+16. null VS undefined
+undefined: 는 아예 정의가 안됨을 의미(아무것도 값이 할당되지 않음)
+null: 빈 값(null이 할당되어 있음)
+
+17. typeof: 자료형을 알려준다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

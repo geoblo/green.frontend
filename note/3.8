@@ -55,8 +55,7 @@ lnb: 로컬 메뉴, 서브 메뉴, 하위 메뉴
 폰트 별로 지원하는 언어가 다르므로 꼭 잘 확인하고 쓰자!!!
 원하는 폰트 선택 -> 스타일 선택 -> link 복사 -> font-family 적용
 
-11. 설명할 줄 알아야 함! (무조건 암기하지 말고 원리를 이해하면 쉬움)
-/* ... 말줄임표 만드는 css 속성 */
+11. 글자 줄임(...) 만드는 css 속성 (원리를 이해하면 쉽게 설명 가능) 
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -86,38 +85,28 @@ align-items
 // 수직 줄 사이 간격?
 align-content
 
+*align-items VS align-content
+align-items: 한 줄만 정렬???
+align-content: 두 줄 이상 정렬?????
+
+align-self: flex item들 각각을 따로 따로 정렬하고 싶을 때
+
+14. flex 속성 (display flex 속성 안에서만 쓸수 있는지???)
+flex-grow: 늘림비율 (창을 늘릴때?)
+flex-shrink: 줄임비율 (창을 줄일때?)
+flex-basis: 기본크기
+
+flex 값1 : (값이 하나, 단위가 없는 경우) flex-grow
+flex 값1px : (값이 하나, 단위가 있는 경우) flex-basis
+flex 값1 값2px : (값이 두개) 단위가 없는 경우 flex-grow, 단위가 있는 경우 flex-basis
+flex 값1 값2 : (값이 두개, 둘 다 단위가 없는 경우) 순서대로 flex-grow, flex-shrink
+flex 값1 값2 값3 : (값이 세개, 셋 다 단위가 없는 경우) 순서대로 flex-grow, flex-shrink, flex-basis
+
+15. order 속성 (디폴트 값 0)
+flex item의 순서를 바꿀수 있다.
+음수~양수까지 수의 크기에 따라 순서 정렬(주로 양수값으로 부여 1~)
 
 
 
-
-
-
-
-
-
-
-
-***. inline 태그는 패딩 위아래는 먹는데 마진 위아래만 안먹는건지?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***. flexboxfroggy 24레벨 까지 하기..
+***. inline 태그는 패딩 위아래는 먹는데 마진 위아래만 안먹는건지? 패딩도 영역은 잡히는데 실제 동작은 안먹히는듯?
