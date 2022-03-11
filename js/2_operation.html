@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 기본 연산자
+  let num1 = 10, num2 = 20, num3 = 30;
+  let sum = num1 + num2;
+
+  document.write(sum);
+  document.write("<br><br>");
+
+  // 문자 결합 연산자
+  let name = "재현";
+  let str1 = "입니다.";
+  let num4 = 100;
+  let num5 = 200;
+  let result = name + num4 + num5 + str1;
+  let result2 = name + (num4 + num5) + str1;
+
+  document.write(result);
+  document.write("<br>");
+  document.write(result2);
+  document.write("<br><br>");
+
+  // 대입 연산자
+  let no1 = 10;
+  let no2 = 3;
+
+  // no1 = no1 + no2;
+  no1 += no2;
+
+  document.write(no1);
+  document.write("<br><br>");
+
+  // 대입 연산자 응용
+  var html = "<table border='1'>";
+	html    += "  <tr>";
+	html    += "    <td>1</td><td>2</td><td>3</td>";
+	html    += "  </tr>";
+	html    += "</table>";
+	document.write( html );
+	console.log(html);
+  document.write("<br>");
+
+  // 증감 연산자
+  let num8 = 10;
+  let num9 = 20;
+  let result3;
+
+  num8--;
+  document.write(num8 + "<br>");
+  num8++;
+  document.write(num8 + "<br>");
+  document.write("<br>");
+
+  result3 = num9++;
+  document.write(result3 + "<br>");
+  document.write(num9 + "<br>");
+
+  result3 = ++num9;
+  document.write(result3 + "<br>");
+  document.write("<br>");
+
+  // 6. 비교 연산자
+  num1 = 10, num2 = 20;
+  document.write(num1 < num2);
+  document.write("<br>");
+  document.write(num1 > num2);
+  document.write("<br>");
+  document.write(num1 != num2);
+  document.write("<br><br>");
+
+  num1 = 10; // 숫자형
+  num2 = "10"; // 문자형
+  document.write((num1 == num2) + "<br>");
+  document.write((num1 === num2) + "<br>");
+
+  // 7. 논리 연산자
+  var a=10;
+  var b=20;
+  var m=30;
+  var n=40;
+
+  result= a>b || b>=m || m>n;     // false || false || false 
+  document.write(result, "<br />");  // false
+
+  result= a>b || b>=m || m<=n;   // false || false || true
+  document.write(result, "<br />"); // true
+
+  result= a<=b && b>=m && m<=n; // true && false && true
+  document.write(result, "<br />"); // false
+
+  result= a<=b && b<=m && m<=n; // true && true && true
+  document.write(result, "<br />"); // true
+
+  result= !(a>b);  // !false
+  document.write(result, "<br />"); // true
+  document.write("<br>");
+
+  // 8. 삼항 연산자
+  a = 10;
+  b = 3;
+  document.write(a > b ? 'js' : 'hello');
+  document.write("<br><br>");
+
+  // Short-circuit evaluation 예제
+  var aa; // undefined (falsy value)
+  var bb = null; // null (falsy value)
+  var cc = undefined; // undefined (falsy value)
+  var dd = 4; // number (NOT falsy)
+  var ee = 'five'; // assigment short circuits before reaching here
+  var ff = aa || bb || cc || dd || ee;
+  document.write(ff, "<br>");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 1번 문제
+  const price1 = 3000; // 교통비
+  const price2 = 6000; // 식비
+  const price3 = 3000; // 음료비
+
+  let total = price1 + price2 + price3;
+  let properCost = 10000;
+  let result1 = total > properCost ? total - properCost + '원 초과' : '돈 관리 잘 했어요!';
+
+  document.write(result1, "<hr>");
+
+  // 2번 문제
+  const one = 1200;
+  const two = 1300;
+  const three = 1000;
+  const four = prompt("4분기 판매량은?", 0);
+
+  let avg = (one + two + three) / 3;
+  let result2 = Number(four) >= avg ? '판매량이 평균 이상입니다.' : '판매량이 평균 미달입니다.';
+  
+  document.write(`<h3>1~3분기 평균 판매량: ${avg}</h3>`, result2, '<hr>');
+
+  // 3번 문제
+  let name = prompt("당신의 이름은?", "");
+	let height = prompt("당신의 신장은?", "0");
+	let weight = prompt("당신의 몸무게는?", "0");
+
+  let normal_w = (height - 100) * 0.9;
+  let result3 = weight >= normal_w - 5 && weight <= normal_w + 5;
+	result3 = result3 ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+
+  let html = "<table border='1'>";
+	html    += "  <tr>";
+	html    += "    <td>이름</td><td>신장</td><td>몸무게</td><td>평균체중</td><td>결과</td>";
+	html    += "  </tr>";
+	html    += "  <tr>";
+	html    += `    <td>${name}</td><td>${height}</td><td>${weight}</td><td>${normal_w}</td><td>${result3}</td>`;
+	html    += "  </tr>";
+	html    += "</table>";
+	document.write(html);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // prompt 리턴값 테스트
+  let str = prompt("문자를 입력", "default");
+	let num1 = prompt("숫자를 입력", 100);
+	let num2 = prompt("숫자2를 입력", "200");
+	document.writeln(str, "<br>");
+	document.writeln(num1, "<br>");
+	document.writeln(num2, "<br>");
+  document.writeln(`num1의 타입은 ${typeof num1}`, "<br>");
+  document.writeln(`num2의 타입은 ${typeof num2}`, "<br>");
+  document.writeln(`숫자의 합은 ${num1 + num2}`, "<br>");
+  document.writeln(`숫자의 비교는 ${num1 < num2}`, "<br>");
+
+  document.writeln(`다른 유형간 비교는 ${"dd" < 100}`);
+</script>
+</body>
+</html>
