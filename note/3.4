@@ -9,10 +9,11 @@ visibility: hidden; = 공간은 그대로 차지하면서 숨김 처리
 2.
 1) inline 
 width, height 적용 안됨
+padding 상하좌우 영역은 잡히는데, block이 아니기 때문에 실제 우리가 기대하는 padding의 위아래의 효과가 안나옴
 margin 좌우만 적용 됨
 
 2) inline-block
-: inline 태그에 가로 세로를 먹이고 싶을 때, 아니면 block 태그에 inline 속성만 먹이고 싶을 때
+: inline 태그에 가로 세로 / 마진 패딩 위아래를 자유롭게 먹이고 싶을 때, 아니면 block 태그에 inline 속성만 먹이고 싶을 때
 : 그래도 inline 속성은 살아 있어서 옆으로 나열됨
 : 교재 169p 참고
 width, height 적용 됨

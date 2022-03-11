@@ -70,18 +70,90 @@ PC 웹 브라우저에서는 예쁘게 나오지않기 때문에 요새는 잘 �
 div 태그를 이용해서 커스터마이징하여 콤보 박스를 만들어 사용
 
 12. 공간 분할 태그
--block 속성: div, h1~h6, p, ul ol, table, form
--inline 속성: span, a, input, 글자 형태 태그(small, b, i, em, strong, sub, sup, del, ins)
+-block 속성: 대표 태그 <div>
+Here are the block-level elements in HTML:
+1) 시멘틱 태그
+<address>
+<article>
+<aside>
+<figure>
+<figcaption>
+<footer>
+<header>
+<main>
+<nav>
+<section>
+
+2) 테이블 태그
+<table>
+<tfoot>
+
+3) 목록 태그
+<ol><ul><li>
+<dl><dt><dd>
+
+4) 글자 태그
+<h1>-<h6>
+<p>
+<hr>
+
+5) 입력 양식 태그
+<fieldset>
+<form>
+
+99) 기타
+<blockquote> - 인용문
+<canvas>
+<pre> - 프리포맷팅
+<div> - 공간 분할
+<video>
+<noscript>
+
+-inline 속성: 대표 태그 <span>
+Here are the inline elements in HTML:
+1) 글자 태그
+<small>
+<big> - Not Supported in HTML5.
+<b><strong>
+<i><em>
+<sub><sup>
+<del><ins>
+*잠깐 상식! : <del> 태그는 브라우저 기본 css 값이 text-decoration: line-through; 이다.
+<br>
+
+5) 입력 양식 태그
+<input>
+<label>
+<select>
+<textarea>
+
+99) 기타
+<a>
+<abbr> - 약어
+<acronym>
+<bdo>
+<button>
+<cite>
+<code>
+<dfn>
+<img>
+<kbd>
+<map>
+<object>
+<output>
+<q> - ""
+<samp>
+<script>
+<span> - 공간 분할
+<time>
+<tt>
+<var>
 
 block 태그의 종특: width를 지정하지 않으면 무조건 100%, height를 지정하지 않으면 콘텐츠의 크기에 맞춰서 자동으로!
 inline 태그의 종특: width, height는 fit되게 콘텐츠의 크기에 맞게! (width, height 지정하면 안먹힘)
+*Note: An inline element cannot contain a block-level element!
 
-Here are the block-level elements in HTML:
-<address><article><aside><blockquote><canvas><dd><div><dl><dt><fieldset><figcaption><figure><footer><form><h1>-<h6><header><hr><li><main><nav><noscript><ol><p><pre><section><table><tfoot><ul><video>
-
-Here are the inline elements in HTML:
-<a><abbr><acronym><b><bdo><big><br><button><cite><code><dfn><em><i><img><input><kbd><label><map><object><output><q><samp><script><select><small><span><strong><sub><sup><textarea><time><tt><var>
-Note: An inline element cannot contain a block-level element!
+img 태그는 width, height를 먹는다. 인라인-블록 태그로 봐야 하는가?????????????
 
 13. HTML5 시멘틱 구조 태그
 시멘틱 웹: 태그에 의미를 부여해서 컴퓨터가 이해하기 쉽도록 함
@@ -100,7 +172,6 @@ footer
 address
 main
 figure 등등
-
 
 14. CSS선택자: 모든 선택자는 ,를 이용하면 여러개 한꺼번에 선택 가능 
 1) * : html태그를 포함해 html 페이지 내부의 모든 태그를 선택
