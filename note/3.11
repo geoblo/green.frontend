@@ -80,18 +80,3 @@ $userList, $newTodoList
 => .menu__list {} 가독성 좋고 선택자가 길어지지도 않음
 
 15. CSS 전처리기: SASS & SCSS
-
-16. .svg: 벡터 이미지(장점: 확대를 해도 깨지지 않는다.)
-
-17. css 파일 나누기
-보통 여러 페이지를 이동해도 header와 footer는 공통
-common.css : header와 footer에 관련된 공통 css
-main.css : header와 footer 사이 main content에 관련된 css
-
-18. /* fixed 사용시 width 값을 100%로 줘야한다. */
-
-19. calc() CSS 함수
-
-
-
-

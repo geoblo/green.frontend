@@ -1,1 +1,124 @@
 @charset "UTF-8";
+
+/* 메인 콘텐츠 */
+#main_content {
+  /* height: 100vh; */
+  background: #d8d8d8;
+}
+
+#main_content > div {
+  width: 960px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 15px 0;
+}
+
+#main_content > #main_container > section {
+  float: left;
+  width: 730px;
+}
+
+#main_content > #main_container > section > article {
+  /* 부모의 width 730px로 정했놓았기 때문에 vw를 쓰면 안된다. */
+  width: 90%;
+}
+
+#main_content > #main_container > section > #weather_map {
+  height: 400px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+#main_content > #main_container > section > #weather_map > #map {
+  width: 90%;
+  height: 360px;
+  /* 카카오맵 자체에 인덱스 값이 설정되어 있어서 강제로 0으로 맞춰줘야 다른 메뉴가 뒤로 깔리지 않음 */
+  z-index: 0 !important;
+  margin: 0 auto;
+}
+
+#main_content > #main_container > section > #weather_location {
+  height: 400px;
+  margin-bottom: 20px;
+  /* background: #d8d8d8; */
+}
+
+#main_content > #main_container > section > #weather_location a {
+  display: inline-block;
+  height: 51px;
+  /* - 8px 한 이유? margin 2 * 4 = 8??? 4만 더 해줘도 됨 */
+  width: calc(50% - 8px);
+  background: white;
+  margin: 2px;
+  line-height: 51px;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(1) {
+  width: 60%;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(2) {
+  width: 20%;
+}
+
+#main_content > #main_container > section > #weather_location a span:nth-child(3) {
+  width: 15%;
+}
+
+#main_content > #main_container > section > #weather_location a img {
+  width: 30px;
+  height: 30px;
+}
+
+#main_content > #main_container > aside {
+  float: right;
+  width: 210px;
+}
+
+#main_content > #main_container > section > #weather_add {
+  height: 50px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+/* 주의점: 미디어 쿼리는 반드시 밑에 작성해야된다! */
+/* 0 ~ 767 */
+@media screen and (max-width: 767px) {
+  #main_content > div {
+    width: 100%;
+  }
+
+  #main_content > #main_container > section {
+    width: 100%;
+  }
+
+  #main_content > #main_container > section > article {
+    width: 100%;
+  }
+
+  #main_content > #main_container > section > #weather_location a {
+    width: 100%;
+  }
+
+  #main_content > #main_container > aside {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 768 ~ 1023 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #main_content > div {
+    width: 100%;
+  }
+
+  #main_content > #main_container > section {
+    width: calc(100% - 210px);
+  }
+}
+
+/* 1024 이상 */
+@media screen and (min-width: 1024px) {
+
+}

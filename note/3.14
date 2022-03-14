@@ -1,0 +1,69 @@
+1. 아큐웨더 클론코딩
+1) .svg: 벡터 이미지(장점: 확대를 해도 깨지지 않는다.)
+
+2) css 파일 나누기
+보통 여러 페이지를 이동해도 header와 footer는 공통
+common.css : header와 footer에 관련된 공통 css
+main.css : header와 footer 사이 main content에 관련된 css
+
+3) /* fixed 사용시 width 값을 100%로 줘야한다. */
+
+4) calc() CSS 함수
+주의! () 안에서 띄어쓰기 해야됨
+
+5) https://fontawesome.com/
+아이콘을 이미지가 아닌 폰트와 똑같이 쓸 수 있음(font-size 같은 속성이 동일하게 먹힘)
+library 폴더에 추가하고 link 걸어서 사용
+
+6-1) @keyframes 사용자정의 애니메이션 id값
+: 애니메이션을 미리 정의 
+
+6-2) animation 속성에 id값이랑 같이 시간 입력
+해당 시간동안 id값으로 정의된 애니메이션 실행
+
+7) https://animate.style/
+애니메이션을 일일이 다 만들면 번거롭 => Animate.css 사용
+
+8) 주의점: 미디어 쿼리는 반드시 밑에(디폴트 값보다 아래에) 작성해야된다!
+
+9) vw(viewport width), vh도 있음
+90vw: 뷰포트 너비의 90% 를 의미
+
+**중요! 
+%, vw의 차이점 
+=> vw는 기준이 뷰포트이고 %는 부모 태그가 기준이 되므로 부모가 100% 크기를 갖지 않으면 vw와 다르게 동작한다.
+
+10) 반응형 레이아웃 정리!
+- 상대, 절대크기를 적절하게 사용
+- calc: 어떤건 고정시키고 어떤건 비율로 조정하고 싶을때 많이 씀, 마진패딩 잘 생각해서 쓸 것!
+- vw: 많이 씀
+- 반응형 이미지 만드는 법 3가지
+
+
+2. 반응형 이미지 만들기! (2가지 방법)
+1) 뷰포트 크기에 따라 계속 너비가 늘어나고 줄어듬 
+.img1 { 
+  width: 100%; 
+  height: auto;
+}
+
+2) 원본 이미지의 사이즈 너비만큼 되면 더 이상 늘리지 않음
+.img2 {
+  max-width: 100%;
+  height: auto;
+}
+
+3. adaptive 이미지 만들기
+<picture>
+  <source srcset="lime-1000.jpg" media="(min-width:1024px)">
+  <source srcset="lime-740.jpg" media="(min-width:768px)">
+  <source srcset="lime-300.jpg" media="(min-width:320px)">
+  <img src="lime.jpg" alt="lime" style="max-width:100%">
+</picture>
+
+4. 예전엔 body에 width와 margin 0 auto를 줬는데
+요새는 헤더와 푸터가 100% 가는 추세라 헤더랑 메인이랑 푸터랑 각각 주는게 좋다.
+
+@@실습 (float 반응형 레이아웃 하나 만들기)
+- 참고사이트
+: 굿 웹디자인 (https://www.gdweb.co.kr/main/)

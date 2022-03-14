@@ -7,6 +7,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="library/fontawesome-free-6.0.0-web/css/all.min.css">
 </head>
 <body>
   <header id="main_header">
@@ -43,24 +44,105 @@
           </li>
         </ul>
         <div class="setting">
-          <a href="#"></a>
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+          </a>
         </div>
         <div class="trigger">
           <!-- 모바일에서 햄버거 버튼 -->
-          <a href="#" class="mobile hamburger"></a>
-          <a href="#" class="mobile close"></a>
+          <a href="#" class="mobile hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <a href="#" class="mobile close">
+            <i class="fa-solid fa-xmark"></i>
+          </a>
         </div>
       </div>
     </div>
     <div id="search_box"></div>
   </header>
   <div id="main_content">
-    <div id="main_top"></div>
+    <div id="main_top">
+      <article>
+        <div>
+          <img src="https://via.placeholder.com/960x250.png" alt="광고">
+        </div>
+      </article>
+    </div>
     <div id="main_container">
-      <section id="main_section"></section>
-      <aside id="main_aside"></aside>
+      <section id="main_section">
+        <article id="weather_map">
+          <h5>대한민국 기상 레이더</h5>
+          <div id="map"></div>
+        </article>
+        <article id="weather_location">
+          <h5>대한민국 기상 상태</h5>
+          <div id="forecast">
+            <a href="#" class="location">
+              <span class="q" id="seoul">서울특별시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+            <a href="#" class="location">
+              <span class="q" id="incheon">인천광역시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+            <a href="#" class="location">
+              <span class="q" id="busan">부산광역시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+            <a href="#" class="location">
+              <span class="q" id="gwangju">광주광역시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+            <a href="#" class="location">
+              <span class="q" id="jeju">제주시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+            <a href="#" class="location">
+              <span class="q" id="jeonju">전주시</span>
+              <span class="icon_weather"><img src="https://openweathermap.org/img/wn/01d.png" alt="날씨아이콘"></span>
+              <span class="temp">-℃</span>
+            </a>
+          </div>
+        </article>
+        <article id="weather_add">
+          <div id="add">추가 기상 예보 대한민국</div>
+        </article>
+      </section>
+      <aside id="main_aside">
+        <div>
+          <img src="https://via.placeholder.com/210x400.png" alt="광고">
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/210x400.png" alt="광고">
+        </div>
+      </aside>
     </div>
   </div>
-  <footer id="main_footer"></footer>
+  <footer id="main_footer">
+    <div>
+      <a href="#">전 세계</a> > 
+      <a href="#">아시아</a> > 
+      <a href="#">대한민국</a> > 
+      <a href="#">서울시</a> > 
+      <a href="#">종로1.2.3.4가동</a>
+    </div>
+    <div>
+      <div>
+        © 2021 AccuWeather, Inc. "AccuWeather" and sun design are registered trademarks of AccuWeather, Inc. All Rights Reserved.
+      </div>
+      <div>
+        <a href="#">이용 약관</a> | 
+        <a href="#">개인정보 보호정책</a> | 
+        <a href="#">쿠키 사용 정책</a> | 
+        <a href="#">TAG 공개</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
