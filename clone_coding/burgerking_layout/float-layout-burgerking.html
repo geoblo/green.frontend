@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>float burgerking</title>
   
   <style>
     /* 초기화 */
@@ -44,6 +44,7 @@
       overflow: hidden;
       height: 120px;
       width: calc(100% - 268px);
+      cursor: pointer;
     }
 
     #main_header nav.menu > ul {
@@ -64,76 +65,76 @@
     }
 
     /* 메인 본문 */
-    div.wrap {
+    main.wrap {
       background: wheat;
     }
     
-    div.wrap .container {
+    main.wrap .container {
       max-width: 1440px;
       margin: 0 auto;
     }
 
-    div.wrap .container .main-image {
+    main.wrap .container .main-image {
       height: 480px;
       background: thistle;
     }
 
-    div.wrap .container .main-video {
+    main.wrap .container .main-video {
       height: 605px;
       background: tomato;
     }
 
-    div.wrap .container .sns {
+    main.wrap .container .sns {
       height: 160px;
       background: turquoise;
       overflow: hidden;
       text-align: center;
     }
 
-    div.wrap .container .sns > div {
+    main.wrap .container .sns > div {
       float: left;
       width: 33.33%;
     }
 
-    div.wrap .container .etc {
+    main.wrap .container .etc {
       height: 480px;
       overflow: hidden;
       text-align: center;
     }
 
-    div.wrap .container .etc > div {
+    main.wrap .container .etc > div {
       float: left;
       width: 50%;
     }
 
-    div.wrap .container .etc > div.app {
+    main.wrap .container .etc > div.app {
       background: hotpink;
       height: 100%;
     }
 
-    div.wrap .container .etc > div.deli {
+    main.wrap .container .etc > div.deli {
       background: indianred;
       height: 100%;
     }
 
-    div.wrap .container .find-store {
+    main.wrap .container .find-store {
       background: honeydew;
       height: 597px;
     }
 
-    div.wrap .container .find-store > ul {
+    main.wrap .container .find-store > ul {
       overflow: hidden;
       width: 75vw;
       margin: 0 auto;
     }
 
-    div.wrap .container .find-store > ul > li {
+    main.wrap .container .find-store > ul > li {
       float: left;
       width: 16.66%;
       text-align: center;
     }
 
-    div.wrap .container .gray-area {
+    main.wrap .container .gray-area {
       height: 200px;
       background: gray;
     }
@@ -142,6 +143,26 @@
     #main_footer {
       height: 680px;
       background: #474747;
+    }
+
+    @media screen and (max-width: 767px) {
+      main.wrap .container .etc > div {
+        float: none;
+        width: 100%;
+      }
+
+      main.wrap .container .etc > div.app {
+        height: 50%;
+      }
+
+      main.wrap .container .etc > div.deli {
+        height: 50%;
+      }
+
+      main.wrap .container .find-store > ul > li {
+        width: 33.33%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -162,7 +183,7 @@
       <div class="deli">딜리버리 주문</div>
     </div>
   </header>
-  <div class="wrap">
+  <main class="wrap">
     <div class="container">
       <section class="main-image"></section>
       <section class="main-video"></section>
@@ -189,7 +210,7 @@
       <section class="gray-area">
       </section>
     </div>
-  </div>
+  </main>
   <footer id="main_footer"></footer>
 </body>
 </html>
