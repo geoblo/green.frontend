@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>flex youtube</title>
+	<style>
+		/* 초기화 */
+		* { 
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		a { text-decoration: none !important; }
+		img { border: 0; }
+		ul { list-style: none; }
+
+		.header {
+			display: flex;
+			align-items: center;
+			height: 56px;
+			background: aqua;
+			/* position: fixed; */
+		}
+
+		.header > h1.logo {
+			width: 120px;
+			height: 100%;
+			background: red;
+		}
+
+		.header > .search {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.header .search__input > * {
+			height: 40px;
+		}
+
+		.header .search__input > input[type='text'] {
+			width: 40vw;
+		}
+
+		.header .search__input > button {
+			width: 64px;
+		}
+
+		.header > .setting {
+			min-width: 225px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.main {
+			display: flex;
+			height: 100vh;
+		}
+
+		.aside {
+			min-width: 200px;
+			background: yellowgreen;
+		}
+
+		.wrap {
+			width: 100%;
+		}
+
+		.category {
+			height: 58px;
+			background: yellow;
+			display: flex;
+			justify-content: center;
+			padding: 10px 100px;
+			column-gap: 20px;
+		}
+
+		.category > button {
+			border: 1px solid black;
+			border-radius: 20px;
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+
+		.banner {
+			height: 260px;
+			background: blueviolet;
+			color: white;
+			font-size: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.content {
+			height: 100%;
+			background: bisque;
+		}
+
+		/* 768 ~ 1023 */
+		@media screen and (min-width: 768px) and (max-width: 1023px) {
+		}
+
+		/* 1024 이상 */
+		@media screen and (min-width: 1024px) {
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">logo</h1>
+		<div class="search">
+			<div class="search__input">
+				<input type="text" placeholder="검색">
+				<button>검색</button>
+			</div>
+		</div>
+		<div class="setting">
+			<span>app</span>
+			<span>sub menu</span>
+			<button>로그인</button>
+		</div>
+	</header>
+	<main class="main">
+		<aside class="aside">
+			<nav>
+				<ul>
+					<li>홈</li>
+					<li>탐색</li>
+					<li>Shorts</li>
+					<li>구독</li>
+					<li>보관함</li>
+					<li>시청기록</li>
+				</ul>
+			</nav>
+		</aside>
+		<div class="wrap">
+			<section class="category">
+				<button>전체</button>
+				<button>실시간</button>
+				<button>음악</button>
+				<button>게임</button>
+				<button>요리</button>
+				<button>운동</button>
+				<button>최근 업로드 동영상</button>
+			</section>
+			<section class="banner">광고영역</section>
+			<section class="content">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</section>
+		</div>
+	</main>
+</body>
+</html>
