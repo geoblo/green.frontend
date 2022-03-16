@@ -1,0 +1,14 @@
+1. JS 제어문(조건문/선택문/반복문)
+
+2. num % 2 == 0 짝수 판별하기
+
+3. confirm() 함수
+리턴값: 확인을 누르면 true, 취소를 누르면 false 리턴
+
+4. location.reload() 함수
+브라우저의 윈도우 객체 내 로케이션, 페이지 새로고침
+
+5. location.href 속성
+returns the entire URL of the current page.
+
+location.href에 url을 바꿔주면 그 페이지로 이동

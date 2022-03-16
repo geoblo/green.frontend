@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // null 0 undefined "" NaN => false
+  
+  // 조건문
+  // if
+  let a = 1;
+  let flag = false;
+  let flag2 = NaN;
+
+  if (a === 1) {
+    document.write("a는 1과 같다!");
+  } else {
+    document.write("a는 1과 다르다!");
+  }
+  document.write("<br>");
+  if (!flag2) {
+    document.write("1212121");
+  }
+  document.write("<br>");
+  if (a === 1) {
+    document.write("a는 1과 같다!");
+  } else if (a === 2) {
+    document.write("a는 2이다!");
+  } else {
+    document.write("a는 아니다!");
+  }
+  document.write("<br>");document.write("<br>");
+
+  // switch
+  // 조건식 안에서 형변환 안됨 => 문자 숫자 구분해서 쓸 것!
+  switch (a) {
+    case 1:
+      document.write("11111111111");
+      break;
+    case 2:
+      document.write("22222222222");
+      break;
+    case 3:
+      document.write("33333333333");
+      break;
+    default:
+      document.write("이도 저도 아닐 때");
+      break;
+  }
+
+
+
+
+</script>
+</body>
+</html>
