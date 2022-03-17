@@ -38,6 +38,23 @@
     document.write("반복", i + 1, "<br>");
   }
 
+  document.write("<br>");
+
+  // continue
+  for (let i = 1; i <= 10; i++) {
+		if (i % 2 === 0) continue;
+		document.write(i, "<br>");
+	}
+	document.write("=== The End ===");
+  document.write("<br>"); document.write("<br>");
+
+  // 중첩 for문
+  for (let i = 1; i <= 3; i++) { // 행
+		for (let k = 1; k <= 2; k++) { // 열
+			document.write(i + "행" + k + "열 ");
+		}
+		document.write("<br>");
+	}
 </script>
 </body>
 </html>

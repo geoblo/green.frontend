@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 문제1-1
+  // let num = prompt("정수 한 개를 입력하세요.", 0);
+  // document.write(typeof num);
+
+  // if (Number(num) >= 50) {
+  //   document.write("이상");
+  // } else {
+  //   document.write("미만");
+  // }
+  
+  // 문제1-2
+  // let num = prompt("정수 한 개를 입력하세요.", 0);
+
+  // if (Number(num) % 3 === 0) {
+  //   document.write("3의 배수");
+  // } else {
+  //   document.write("3의 배수 아님");
+  // }
+
+  // 문제1-3
+  // let grade = Number(prompt("학년?", 1));
+  // let score = Number(prompt("점수?", 0));
+
+  // if (score < 0 || score > 100) {
+  //   alert("에러입니다.");
+  // }
+
+  // if (grade === 4) {
+  //   if (score >= 70) document.write("합격");
+  //   else document.write("불합격");
+  // } else if (score >= 60) {
+  //   document.write("합격");
+  // } else {
+  //   document.write("불합격");
+  // }
+
+  // 문제2-1
+  // let num = prompt("정수 한 개를 입력하세요.", 0);
+
+  // if (num > 0) {
+  //   document.write("양수");
+  // } else if (num < 0) {
+  //   document.write("음수");
+  // } else {
+  //   document.write("0");
+  // }
+
+  // 문제2-2
+  // let height = prompt("신장을 입력하세요.", 0);
+
+  // if (height >= 150) {
+  //   document.write("놀이기구 이용 가능");
+  // } else {
+  //   let withMom = confirm("부모와 함께 왔는가??");
+  //   if (withMom) {
+  //     document.write("좋은 시간 보내렴~");
+  //   } else {
+  //     document.write("어른 모시고 다시 오렴~");
+  //   }
+  // }
+
+  // 문제2-3
+  // let num1 = Number(prompt("정수1 입력하세요.", 0));
+  // let num2 = Number(prompt("정수2 입력하세요.", 0));
+  // let num3 = Number(prompt("정수3 입력하세요.", 0));
+  
+  // let maxValue = Math.max(num1, num2, num3);
+  // let minValue = Math.min(num1, num2, num3);
+  // let sum = num1 + num2 + num3;
+  // let avg = (num1 + num2 + num3) / 3;
+
+  // document.write(`최대값: ${maxValue}<br>`);
+  // document.write(`최소값: ${minValue}<br>`);
+  // document.write(`합계: ${sum}<br>`);
+  // document.write(`평균: ${avg}`);
+
+  // 보너스. 자판기 문제
+  let snack = prompt("고를 과자??", "");
+  let money = Number(prompt("넣을돈??", 0));
+
+  let snackCost = 0;
+  switch (snack) {
+    case '허니버터':
+      snackCost = 1300;
+      break;
+    case '칸쵸':
+      snackCost = 1500;
+      break;
+    case '프링글스':
+      snackCost = 3000;
+      break;
+  }
+
+  if (!money) {
+    alert('돈을 안넣으셨어요~');
+    location.reload();
+  } else if (snack !== '허니버터' && snack !== '칸쵸' && snack !== '프링글스') {
+    alert('그런 과자는 없어요~');
+    location.reload();
+  } else {
+    if (snack === '허니버터' && money < snackCost
+      || snack === '칸쵸' && money < snackCost
+      || snack === '프링글스' && money < snackCost
+    ) {
+      alert('돈이 모자라네요~');
+      location.reload();
+    }
+  }
+
+  document.write(`선택한 과자 ${snack}를 맛있게 드세요~ <br>거스름돈은 ${money - snackCost}입니다.`);
+</script>
+</body>
+</html>

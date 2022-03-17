@@ -12,3 +12,10 @@
 returns the entire URL of the current page.
 
 location.href에 url을 바꿔주면 그 페이지로 이동
+
+6. var와 let 의 차이점
+둘 다 변수이지만 scope가 다름!!
+
+7. 
+for (i in arr)
+for (item of arr)

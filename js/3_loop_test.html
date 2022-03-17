@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 문제1-1
+  for (let i = 10; i >= 0; i-- ) {
+    document.writeln(i);
+  }
+  document.write('<br>');
+
+  // 문제1-2
+  for (let i = 0; i < 10; i++ ) {
+    if (i % 2 === 0) {
+      document.writeln(i);
+    }
+  }
+  document.write('<br>');
+
+  // 문제1-3
+  let sum = 0;
+  for (let i = 0; i < 10; i++ ) {
+    sum += i;
+  }
+  document.write(sum);
+  document.write('<br>');
+
+  // 문제1-4
+  sum = 0;
+  for (let i = 1; i < 20; i++ ) {
+    if (i % 2 === 0 || i % 3 === 0) {
+      sum += i;
+    }
+  }
+  document.write(sum);
+  document.write('<br>');
+
+  // 문제1-5
+  // let str = prompt("과목??", "");
+  // let code;
+
+  // switch (str) {
+  //   case '수학':
+  //     code = '01';
+  //     break;
+  //   case '영어':
+  //     code = '02';
+  //     break;
+  //   case '국어':
+  //     code = '03';
+  //     break;
+  //   case '국사':
+  //     code = '04';
+  //     break;
+  //   default:
+  //     code = '00';
+  //     break;
+  // }
+  // document.write(`과목코드: ${code}`);
+  // document.write('<br>');
+
+  // 문제1-6
+  let i = 0;
+  while (i < 10) {
+    if (i % 2 === 1) {
+      document.writeln(i);
+    }
+    i++;
+  }
+  document.write('<br>');
+
+ // 문제1-7
+  i = 9;
+  do {
+    if (i % 2 === 0) {
+      document.writeln(i);
+    }
+    i--;
+  } while (i >= 0) {
+  }
+  document.write('<br>');document.write('<br>');
+
+  // 문제2-1
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j <= i; j++) {
+      document.write('*');
+    }
+    document.write('<br>');
+  }
+  document.write('<br>');
+
+  // 문제2-2
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+      if (i > j) {
+        document.write('&nbsp;');
+      } else {
+        document.write('*');
+      }
+    }
+    document.write('<br>');
+  }
+  document.write('<br>');
+
+  // 시간 남아서 추가로
+  for (let i = 5; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      document.write('*');
+    }
+    document.write('<br>');
+  }
+  document.write('<br>');
+
+
+
+</script>
+</body>
+</html>

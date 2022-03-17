@@ -1,0 +1,95 @@
+1. 객체란? (Object) - 사물 물건 물체 등
+: 객체화를 시키면 재사용성, 생산성이 높아짐..
+: 속성과 기능(메소드, 함수(function))을 갖고 있음
+
+예1) 티비
+기능: 볼륨 업/다운, 전원 온/오프
+속성: 너비, 색깔, 해상도
+
+예2) 자동차
+기능: 달리다, 에어컨, 음악
+속성: 색, 도어수
+
+예3) 나
+기능: 걷다, 달리다
+속성: 키, 몸무게, 나이
+
+2. JS가 제공하는 객체
+1) 내장 객체
+: Array, String, Number, Math, Date, Global, RegExp, Classes, Error, Boolean, Operators, Statements, JSON
+
+2) 브라우저 객체(BOM)
+Window: 브라우저 객체의 최상위 객체
+Window 객체의 하위 객체: document, History, Location, Navigator, Screen
+
+예) window.prompt()
+window.location.href
+
+3) 문서 객체(DOM)
+The HTML DOM Tree
+Document Element Attributes Events Event Objects HTMLCollection Style
+
+3. Date 
+: https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date
+: mdn 공부공부
+
+getMonth: 현재월 January = 0, February = 1, ... The month of the date (0 to 11).
+getDate: 현재일 The day of the month (1 to 31).
+getDay: 현재요일 Sunday = 0, Monday = 1, ...  The day of the week (0 to 6).
+
+*생성자
+Date()
+함수로 호출할 경우 new Date().toString()과 동일하게 현재 날짜와 시간을 나타내는 문자열을 반환합니다.
+new Date()
+생성자로 호출할 경우 새로운 Date 객체를 반환합니다.
+
+4. Math
+1) Math.random()
+: returns a random number from 0 (inclusive) up to but not including 1 (exclusive).
+
+예) 간단한 가위 바위 보 게임 만들기
+
+5. Array
+생성 방식 2가지
+
+1) 원래 방식
+let arr = new Array();
+arr[0] = 1;
+arr[1] = 2;
+arr[2] = 3;
+
+let arr1 = new Array(1, [1,2], '재현', new Date());
+
+2) 제일 많이 쓰는 축약된 방식!!!
+let arr1 = [1, 2, 3];
+
+=> arr.length: 배열의 길이
+=> 배열은 반복문과 함께 많이 쓰인다.
+
+6. 객체 데이터
+생성 방식 2가지
+
+1)
+let tv = new Object();
+tv.color = "white";
+tv.price = 300000;
+tv.info = function() {
+  document.write("tv 색상: " + this.color, "<br>");
+  document.write("tv 가격: " + this.price, "<br>");
+}
+
+tv.color = "blue";
+
+2)
+let car = { 
+  color: "black",
+  price: 5000000,
+  info: function() {
+    document.write("car 색상: " + this.color, "<br>");
+    document.write("car 가격: " + this.price, "<br>");
+  } 
+}; 
+
+car.color = "white";
+
+=> 객체와 배열을 혼합해서 많이 쓴다.
