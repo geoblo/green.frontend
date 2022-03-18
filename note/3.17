@@ -16,10 +16,12 @@
 
 2. JS가 제공하는 객체
 1) 내장 객체
+: 브라우저의 자바스크립트 엔지에 내장된 객체
 : Array, String, Number, Math, Date, Global, RegExp, Classes, Error, Boolean, Operators, Statements, JSON
 
 2) 브라우저 객체(BOM)
-Window: 브라우저 객체의 최상위 객체
+: 브라우저에 내장된 객체
+브라우저 객체의 최상위 객체: Window
 Window 객체의 하위 객체: document, History, Location, Navigator, Screen
 
 예) window.prompt()
