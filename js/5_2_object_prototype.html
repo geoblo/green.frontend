@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 객체 정의
+  function Tv(color, size) {
+    // 속성
+    this.color = color;
+    this.size = size;
+    this.power = false;
+
+    // 함수 (프로토타입의 함수가 아님 - 메모리 낭비)
+    this.testFunc = function() {
+      console.log(`test`);
+    };
+  }
+
+  // 함수 (메모리 낭비가 덜함)
+  Tv.prototype.printColor = function() {
+    console.log(`컬러는 ${this.color}`);
+  };
+  Tv.prototype.printSize = function() {
+    console.log(`사이즈는 ${this.size}`);
+  };
+  Tv.prototype.turnOn = function() {
+    this.power = true;
+  };
+  Tv.prototype.turnOff = function() {
+    this.power = false;
+  };
+
+  // 객체 생성
+  const tv = new Tv("blue", 55);
+  const tv2 = new Tv("yellow", 60);
+  
+  tv.printColor();
+  tv.printSize();
+  
+  console.log("=======================================");
+  
+  tv2.printColor();
+  tv2.printSize();
+  
+  console.log("=======================================");
+  
+  tv.testFunc();
+
+</script>
+</body>
+</html>

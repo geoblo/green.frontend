@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 문제1
+  /* function add(num1, num2) {
+    return num1 + num2;
+  }
+  function sub(num1, num2) {
+    return num1 - num2;
+  }
+  function division(num1, num2) {
+    return num1 / num2;
+  }
+  function multiple(num1, num2) {
+    return num1 * num2;
+  }
+
+  console.log(add(10, 3));
+  console.log(sub(10, 3));
+  console.log(division(10, 3));
+  console.log(multiple(10, 3)); */
+
+  // 문제2
+  /* function Calc(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+
+  Calc.prototype.add = function() {
+    return this.num1 + this.num2;
+  };
+  Calc.prototype.sub = function() {
+    return this.num1 - this.num2;
+  };
+  Calc.prototype.division = function() {
+    return this.num1 / this.num2;
+  };
+  Calc.prototype.multiple = function() {
+    return this.num1 * this.num2;
+  };
+
+  const calc = new Calc(10, 3);
+  console.log(calc.add());
+  console.log(calc.sub());
+  console.log(calc.division());
+  console.log(calc.multiple()); */
+  
+  // 문제3
+  // 화살표 함수 형태
+  /* const add = (num1, num2) => num1 + num2;
+  const sub = (num1, num2) => num1 - num2;
+  const division = (num1, num2) => num1 / num2;
+  const multiple = (num1, num2) => num1 * num2;
+
+  console.log(add(10, 3));
+  console.log(sub(10, 3));
+  console.log(division(10, 3));
+  console.log(multiple(10, 3)); */
+
+  // class 형태
+  class Calc {
+    constructor(num1, num2) {
+      this.num1 = num1;
+      this.num2 = num2;
+    }
+
+    add() {
+      return this.num1 + this.num2;
+    }
+    sub() {
+      return this.num1 - this.num2;
+    }
+    division() {
+      return this.num1 / this.num2;
+    }
+    multiple() {
+      return this.num1 * this.num2;
+    }
+  }
+
+  const calc = new Calc(10, 3);
+  console.log(calc.add());
+  console.log(calc.sub());
+  console.log(calc.division());
+  console.log(calc.multiple());
+
+</script>
+</body>
+</html>

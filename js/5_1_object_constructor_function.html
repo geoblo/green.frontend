@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  // 객체 정의
+  function Tv() {
+    // 속성
+    this.color = "black";
+    this.size = 50;
+    this.power = false;
+
+    // 함수
+    this.printColor = function(newColor) {
+      console.log(`컬러는 ${this.color}, 새로운 컬러는 ${newColor}`);
+    };
+    this.printSize = function(sizeUp) {
+      const newSize = this.size + sizeUp;
+      console.log(`사이즈는 ${this.size}, 새로운 사이즈는 ${newSize}`);
+      return newSize;
+    };
+    this.turnOn = function() {
+      this.power = true;
+    };
+    this.turnOff = function() {
+      this.power = false;
+    };
+  }
+
+  // 객체 생성
+  const tv = new Tv();
+  const tv2 = new Tv();
+  
+  tv.printColor("white");
+  const newSize = tv.printSize(10);
+  // console.log(newSize);
+  tv.turnOn();
+  // console.log(tv.power);
+  tv.turnOff();
+  // console.log(tv.power);
+  
+  console.log("=======================================");
+
+  tv2.printColor("pink");
+  tv2.printSize(5);
+  tv2.turnOn();
+  // console.log(tv2.power);
+  tv2.turnOff();
+  // console.log(tv2.power);
+
+
+  // 객체 정의 (생성자)
+  /* function Tv(color, size) {
+    // 속성
+    this.color = color;
+    this.size = size;
+    this.power = false;
+
+    // 함수
+    this.printColor = function() {
+      console.log(`컬러는 ${this.color}`);
+    };
+    this.printSize = function() {
+      console.log(`사이즈는 ${this.size}`);
+    };
+    this.turnOn = function() {
+      this.power = true;
+    };
+    this.turnOff = function() {
+      this.power = false;
+    };
+  }
+
+  // 객체 생성
+  const tv = new Tv("black", 50);
+  const tv2 = new Tv("white", 65);
+  
+  tv.printColor();
+  tv.printSize();
+  
+  console.log("=======================================");
+
+  tv2.printColor();
+  tv2.printSize(); */
+
+</script>
+</body>
+</html>
