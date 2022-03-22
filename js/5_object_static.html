@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function Person(name, age, phone) {
+      //속성
+      this.name = name;
+      this.age = age;
+      this.phone = phone;
+
+      //non prototype method
+      this.getName = function () {
+        console.log(this.name);
+      };
+    }
+
+    //static method
+    Person.age2 = 10;
+    Person.getAge = function (age) {
+      console.log(age);
+    };
+
+    //prototype method
+    Person.prototype.getPhone = function () {
+      console.log(this.phone);
+    };
+
+    Person.getAge(30);
+    console.log(Person.age2);
+    //   Person.getName(); error
+
+    const person = new Person("영희", 20, "01033334444");
+    person.getName();
+    person.getPhone();
+    //   person.getAge(40); error
+  </script>
+</body>
+</html>
