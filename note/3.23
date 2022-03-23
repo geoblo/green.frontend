@@ -1,0 +1,78 @@
+1. 
+/* 오버플로우 속성 공부하기 */
+overflow: auto;
+
+/* 투명색 */
+background: transparent;
+
+/* unset: 위에서 right 로 세팅한 것을 초기화 */
+text-align: unset;
+
+
+2. HTML DOM NodeList / HTMLCollection
+The Differences Between an HTMLCollection and a NodeList
+A NodeList and an HTMLCollection are both array-like collections (lists) of nodes (elements) extracted from a document. The nodes can be accessed by index numbers. The index starts at 0.
+
+Both objects have a length property that returns the number of elements in the list.
+
+An HTMLCollection is a live collection: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.
+
+A NodeList is a static collection: If you add a <li> element to a list in the DOM, the list in NodeList will not change.
+
+The getElementsByClassName() and getElementsByTagName() methods return an HTMLCollection.
+
+The querySelector() and querySelectorAll() methods return a NodeList.
+
+
+3. addEventListener
+: 이벤트 리스너 추가
+
+element.addEventListener(event, function, useCapture)
+
+useCapture	Optional (default = false).
+false - The handler is executed in the bubbling phase.
+true - The handler is executed in the capturing phase.
+
+
+4. mouseover / mouseenter, mouseout / mouseleave 차이점 공부!!!
+
+
+5. 반복문 차이 공부!!!
+for
+for in
+for of
+forEach
+map filter 등 (=> 얘네들은 배열에서만 쓸 수 있음)
+
+특히 배열에서의 for, forEach, map 의 차이?
+
+5. js를 위로 올렸을 때 DOM load 관련 에러 처리
+1) 순수 javascript 사용시 // object.onload = function(){myScript};
+window.onload = function () { 
+  // your code
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  // your code
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+   // your code
+}, false);
+
+2) jQuery 사용시
+$(document).ready(function(){
+  // your code
+});
+
+$(function() {
+  // your code
+});
+
+$(window).load(function() {
+  // your code
+});
+
+
+6. Well, the element.style will return the inline style attribute values
+Use the window.getComputedStyle to see the rendered style.
