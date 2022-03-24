@@ -1,0 +1,25 @@
+@charset "UTF-8";
+h1 {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+nav ul > li {
+  margin: 10px;
+}
+nav a {
+  color: palegreen;
+}
+
+span.emoji-women-holding-hands {
+  font-family: IconFont;
+  font-variant: normal;
+  font-weight: normal;
+  content: "안녕";
+  color: aquamarine;
+}
+
+/*# sourceMappingURL=style.css.map */

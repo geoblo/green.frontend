@@ -1,0 +1,40 @@
+1. swiper 라이브러리 사용해보기
+1) 사용법
+- CDN방식: 
+개네 서버에 문제가 생기면 쓸 수 없다.
+서버에 올려놓은걸 받아서 쓰기 때문에 부하가 더 걸린다? 
+그래서 실무에서는 쓰지 않는다.
+
+- assets을 직접 다운로드해서 쓰는 방식:
+직접 다운로드 받아 쓰기 떄문에 부하가 걸리지 않고 더 좋다.
+
+
+2. img 의 object-fit 공부하기!!!
+- contain
+- cover 등등
+
+
+3. iframe 태그를 사용하여 유튜브 영상 삽입
+
+
+4. text-align
+: Describes how inline contents of a block are horizontally aligned if the contents do not completely fill the line box.
+(내용이 줄 상자를 완전히 채우지 않는 경우 블록의 인라인 내용이 수평으로 정렬되는 방법을 설명합니다.)
+
+
+5. 콘텐츠 삽입하기 
+.banner__content > .order-text > p:nth-of-type(2):before {
+  content: '/ ';
+}
+
+
+
+
+
+
+
+
+
+
+
+

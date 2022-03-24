@@ -1,0 +1,31 @@
+$color: red;
+
+h1 {color: $color;}
+p{color: $color;}
+
+nav{
+    ul > {
+        li {
+            margin: 10px;
+        }
+    }
+
+
+    a {
+        color: palegreen;
+    }
+}
+
+// 정의
+@mixin define-emoji($name, $glyph) {
+    span.emoji-#{$name} {
+        font-family: IconFont;
+        font-variant: normal;
+        font-weight: normal;
+        content: $glyph;
+        color: aquamarine;
+    }
+}
+
+// 사용
+@include define-emoji("women-holding-hands", "안녕");

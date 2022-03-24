@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .wrapper{
+         display:grid;
+         /* repeat 같은 비율로 n번 반복*/
+         grid-template-columns: repeat(3, 1fr);
+         /* grid-template-columns: 1fr 1fr 1fr; */
+         grid-column-gap:30px;
+         grid-row-gap:20px;      
+       }
+       .items{
+         padding:10px;
+         background-color:#eee;
+       }   
+       .items:nth-child(odd){
+         background-color:#bbb;
+       }
+       </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eligendi. Voluptate provident animi itaque illum totam molestias fugit minus, dicta id modi quos ullam, necessitatibus excepturi? Sed numquam ratione nisi.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis impedit, ex, voluptate saepe, ratione placeat enim commodi veniam magnam eum temporibus distinctio consequuntur voluptatem odio quam sed laboriosam. Mollitia, consequuntur?</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nostrum modi necessitatibus eligendi nisi facilis, iusto incidunt, aperiam in itaque minus natus, corporis magni culpa quae eum! Voluptates, sit accusamus.</div>
+        <div class="items">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro cumque deleniti sequi asperiores soluta qui perferendis consectetur! Similique, reiciendis maxime excepturi ducimus earum reprehenderit aliquid eum autem quod mollitia laboriosam.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur incidunt voluptates architecto ipsa necessitatibus quas excepturi delectus, eveniet, libero alias veritatis placeat asperiores, officia minima consectetur nostrum numquam eum voluptatem.</div>
+        <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur incidunt voluptates architecto ipsa necessitatibus quas excepturi delectus, eveniet, libero alias veritatis placeat asperiores, officia minima consectetur nostrum numquam eum voluptatem.</div>
+    </div>
+</body>
+</html>
