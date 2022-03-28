@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="jquery-3.6.0.js"></script>
+  <script>
+    // $(document.ready(function () {
+
+    // }));
+    $(function() {
+      $(".txt").css("color", "blue");
+      // $("p.txt").css("color", "blue");
+      $(".txt2 > .txt-span").css("color", "red");
+
+    });
+  </script>
+</head>
+<body>
+  <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium nobis accusamus soluta est molestias dolorum explicabo assumenda quos suscipit, aut optio quidem non molestiae, magni voluptatibus neque error modi.</p>
+  <p class="txt2">
+    <span class="txt-span">
+      하이요 ~~~
+    </span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusantium nobis accusamus soluta est molestias dolorum explicabo assumenda quos suscipit, aut optio quidem non molestiae, magni voluptatibus neque error modi.</p>
+</body>
+</html>

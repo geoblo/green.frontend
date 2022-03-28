@@ -1,0 +1,104 @@
+1. 부트스트랩을 사용한 웹 페이지 제작
+: 반응형이 고려된 그리드 시스템
+예) col-md-5 col-md-7
+: md 사이즈가 넘어가면 맥스 width가 720으로 고정되면서 direction 이 로우에서 컬럼으로 바뀐다.
+
+1) 부트스트랩 그리드 시스템을 쓰기 위해서는 가장 바깥에(부모에) class=container 가 있어야 한다.
+그 밑에 class=row
+
+2) 모바일에서 숨기고 pc 사이즈에서 보이도록 하는 클래스 조합 
+d-none d-md-block
+
+2. 제이쿼리
+장점: 편하다..
+단점: 속도 (바로 js를 쓰는게 아니라 한번 거쳐서 쓰기 때문)
+
+1) map 파일
+: min 파일은 디버깅이 안되는데,, map 파일은 압축은 되어 있지만 디버깅이 가능하다.
+
+2) 스타일이나 속성 지정하기
+2-1) css() 함수
+- 싱글: .css("스타일 속성명", "값")
+- 멀티: 
+.css({
+  "스타일 속성명": "값", 
+  "스타일 속성명": "값", 
+  "스타일 속성명": "값"
+})
+
+2-2) attr() 함수
+- 싱글: .attr("속성명", "값")
+- 멀티: 
+.attr({
+  "width":200,
+  "src": srcVal.replace("1.jpg","2.jpg"),
+  "alt": "바위"
+})
+
+3) 기본 선택자
+- parent(): 부모 요소를 선택
+- parents(): 상위 요소(모든 부모)를 다 선택 (html 태그까지 선택됨)
+- parents("div"): 부모 요소들 중에 div만 선택
+
+- closest("div"): 상위 요소 중 가장 가까운 div 하나만 선택
+
+- chilidren()
+
+- prev()
+- prevAll()
+- prevUntil()
+
+- next()
+- nextAll()
+- nextUntil()
+
+- siblings()
+
+4) 탐색 선택자
+
+
+3. DOM 
+: 문서 객체 모델 = HTML 문서 객체 구조
+: 최상위 객체 <html>, 하위 객체로 <head>, <body>
+: 이 때 문서 객체 모델에서 모든 태그를 객체라고 부르며, 기능과 속성이 포함되어 있음
+: 예를 들어 <img> 태그는 이미지를 출력하는 기능이 있고, src, alt, width, height 와 같은 속성을 포함하고 있음.
+: <html> 태그는 root(뿌리)라고 부르고, 뿌리로부터 가지처럼 뻗어나가는 모양의 요소를 Node(노드)라고 부름
+: 노드의 종류에는 요소 노드(Element Node), 텍스트 노드(Text Node), 속성 노드(Attribute Node)가 있다.
+
+
+4. select 태그는 selected 속성을 안주면 기본 첫번째 option 태그가 select 된다.
+
+
+5. 객체 조작 메서드
+1) html() / text()
+
+2) attr() / prop() 차이?
+attr은 올라운드 속성 조작?
+
+prop은 주로 폼 요소의 상태 속성값을 가져오거나 설정할 때 사용
+그 외 태그명, 노드 타입, 선택된 요소의 인덱스, 디폴트 값을 알 수 있음
+
+3) 수치 조작
+교재 228p 참고!!!
+
+4) position() / offset() 차이?
+position(): 부모로부터 상대적 위치값
+offset(): document 기준으로 
+
+5) after(), insertAfter() / before(), insertBefore()
+: 선택된 요소 뒤에 또는 앞에
+6) append(), appendTo() / prepend(), prependTo()
+: 선택된 요소의 자식 태그들 중에 뒤에 또는 앞에
+
+7) clone()
+
+8) remove()
+: 선택한 요소를 제거
+
+9) empty()
+: 선택한 요소의 모든 하위 요소들을 제거
+
+10) replaceAll() / replaceWith()
+: 선택한 요소를 바꿀 때
+
+11) unwrap() / wrap() / wrapAll() / wrapInner()
