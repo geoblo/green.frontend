@@ -1,0 +1,172 @@
+1. 제이쿼리 이벤트
+: 이벤트 등록 방식에 따라 단독 이벤트 등록, 그룹 이벤트 등록(on) 2종류가 있다.
+
+1) 단독 이벤트 등록
+$(".btn1").click(function(){
+
+2) 그룹 이벤트 등록
+2-1) 같은 콜백 함수
+$(".btn1").on("click mouseover", function(){
+
+2-2) 이벤트마다 각각 다른 콜백 함수 등록
+$(".btn2").on({
+  "mouseover focus": function() {
+    $(".btn2").parent().next()
+    .css({"color":"#0f0"});
+  },
+  "mouseout blur": function() {
+    $(".btn2").parent().next()
+    .css({"color":"#000"});
+  },
+});   
+
+
+2. 이벤트 강제 발생 2가지 방법
+1) $(".btn1").click();   
+
+2) $(".btn2").trigger("mouseover");
+
+
+3. 이벤트 제거
+$(".btn1").off("click");
+$(".btn2").off("mouseover focus"); 
+
+
+4. ready와 load의 차이점
+1) $(document).ready(function(){ 
+=> DOM 로딩이 끝났을때
+
+2) $(window).load(function(){
+=> DOM + 이미지/비디오 까지 다 불러왔을때
+
+
+5. e.preventDefault( );
+=> 기본 이벤트 차단
+
+
+6. 
+mouseover() / mouseout() : 그냥 각각의 이벤트임
+
+hover() : 마우스 올라갈때 벗어날때 각각 이벤트를 두번 발생시킴
+
+
+7. mouseover vs mouseenter, mouseout vs mouseleave
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mouseenter_mouseover
+https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_event_mouseleave_mouseout
+
+
+8. 이벤트 객체와 종류
+$(function( ) {
+	$(document).on("mousemove", function(e) {
+		$(".posX").text(e.pageX); // 스크롤 x축 이동한 거리
+		$(".posY").text(e.pageY); // 스크롤 y축 이동한 거리
+		$(".cliX").text(e.clientX); // 스크롤 이동거리 무시 x좌표값
+		$(".cliY").text(e.clientY); // 스크롤 이동거리 무시 y좌표값
+		$(".scrX").text(e.screenX); // 화면 모니터를 기준 x좌표값
+		$(".scrY").text(e.screenY); // 화면 모니터를 기준 y좌표값
+	});
+
+  $(window).on("scroll",function(){ // 스크롤바 이동시킬때마 이벤트 발생
+    var sc_top = $(this).scrollTop(); // Top으로부터 스크롤 이동 y좌표값
+    var sc_left = $(this).scrollLeft(); // Left로부터 스크롤 이동 x좌표값
+
+    $(".top").text(sc_top);
+    $(".left").text(sc_left);
+  });
+
+});
+
+
+9. 포커스 이벤트
+focus / blur : 대상 요소에 포커스가 발생하고 해제될때
+focusin / focusout : 하위 요소에 포커스가 발생하고 해제될때
+
+
+10. data와 웹접근성
+: date를 이용하여 사용자 정의 속성을 부여할수 있다.
+: 2)번 케이스가 키보드 이벤트까지 고려한 웹접근성이 잘 지켜졌다.
+
+1) 마우스 이벤트만 고려
+$("#btn1")
+.data({"text":"javascript"})
+.on({
+  "mouseover": overFnc,
+  "mouseout": outFnc
+});
+
+2) 마우스 + 키보드 이벤트까지 고려
+$("#btn2")
+.data({"text":"welcome!"})
+.on({
+  "mouseover focus": overFnc,
+  "mouseout blur": outFnc
+});
+
+
+11. 키보드 이벤트 차이 공부!!
+keydown: 모든키에 대해서 이벤트 발생
+keypress: 기능키를 제외한 키에 대해서 이벤트 발생
+keyup: 
+
+
+12. $(this) 선택자와 index() 인덱스 반환 메서드
+
+
+13. 동적으로 생성된 요소에 대해 이벤트 걸리게 하기
+=> 라이브 이벤트 등록 방식?
+
+on():
+bind():
+delegate():
+one(): 이벤트가 1회만 발생
+
+
+14. 이벤트 제거 메서드
+off(): on() 메서드로 등록한 이벤트 제거
+unbind(): bind() 메서드로 등록한 이벤트 제거
+undelegate(): delegate() 메서드로 등록한 이벤트 제거
+
+=> bind()는 예전에 쓰던것들이라 지양하고 on()을 주로 쓰는것이 좋다!
+
+
+15. 교재 8장 다양한 효과와 애니메이션 교재 공부!!
+
+
+16. 백엔드로부터 데이터를 받는 방식
+node.js에서 사용하는 axios lib
+js에서 제공하는 fetch API
+jquery에서 제공하는 ajax
+
+*CORS 에러: 
+요청하는 주소와 요청받는 주소가 동일하지 않을 때 발생 (보안상의 이유로 브라우저에 막음)
+Open Api의 경우 서버측에서 오픈해놓은 것이라 괜찮음.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
