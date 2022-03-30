@@ -1,0 +1,33 @@
+1. 아큐웨더 사이트 고도화
+1) 부트스트랩 검색창 만들기
+- aria-label 속성
+: input 태그를 쓸때 페어로 label 태그를 써주는 것이 웹 접근성에 맞음
+: 부트스트랩에서는 aria-label 속성으로 label 태그를 대체한다. 
+
+2) 서버와 데이터를 주고 받을때 사용하는 데이터 형식
+JSON(JavaScript Object Notation)
+XML(eXtensible Markup Language)
+
+3) js로 쿼리 스트링 쉽게 가져오기 => JS의 URL 객체를 이용
+var currentUrl = location.href;
+var urlObj = new URL(currentUrl);
+var params = urlObj.searchParams; 
+var q = params.get("q");
+console.log(q);
+
+
+2. 동기와 비동기
+1) 동기: 순서대로, 응답이 올때까지 기다림
+예) 콜백함수 - 비동기를 동기식으로 쓸 수 있음 (근데 콜백함수가 늘어날수록 콜백지옥!)
+
+2) 비동기: 멀티가 가능, 응답을 기다리지 않고 여러가지를 처리함
+예) ajax - 기본적으로 비동기로 동작! (옵션 속성으로 동기/비동기 설정 가능)
+
+// Promise: 데이터를 받았다면 데이터를 넘겨주어 그 다음 작업을 할 수 있게 돕는 객체
+// fetch 함수는 Promise 자체를 반환.
+/*
+  await: async function에서만 동작하는 await라는 특별한 문법
+  자바 스크립트는 await 키워드를 만나면 Promise가 처리될 때까지 기다리고 결과를 반환.
+  Promise.then보다 가독성이 좋고, 간편하게 Promise의 result 값을 얻을 수 있음.
+  주의할 사항은 오직 async function 안에서만 사용가능.
+*/
