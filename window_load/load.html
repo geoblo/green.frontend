@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    console.log(document.querySelector("title"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("h2"));
+  </script>
+  <title>DOM load test</title>
+  <script>
+    console.log("===================================");
+    console.log(document.querySelector("title"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("h2"));
+  </script>
+</head>
+<body>
+  <h1>Process - 1</h1>
+  <script>
+    console.log("===================================");
+    console.log(document.querySelector("title"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("h2"));
+  </script>
+  <h2>Process - 3</h2>
+  <script>
+    console.log("===================================");
+    console.log(document.querySelector("title"));
+    console.log(document.querySelector("h1"));
+    console.log(document.querySelector("h2"));
+  </script>
+</body>
+</html>
