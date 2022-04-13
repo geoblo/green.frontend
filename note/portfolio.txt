@@ -1,0 +1,43 @@
+1. 웹 포트폴리오 만들기 참고 (리액트 진행시 이걸로!!)
+https://yeop-blog.github.io/2017/08/11/2017-08-11-developer_portfolio_list/index.html
+
+
+2. 4/19까지 웹 사이트 만들기
+1) 주제: 여행 코스 공유 사이트
+
+여행코스 공유 및 리뷰 (비공개 설정 가능)
+
+
+2) 구글맵 사용? 카카오맵 사용?
+구글맵 > 카카오맵
+
+
+3. JS 만으로 헤더 푸터 분리하기
+// . js ES6
+// fetch("footer.html")
+//   .then(response => {
+//     return response.text();
+//   })
+//   .then(data => {
+//     document.querySelector(".footer").innerHTML = data;
+//   });
+
+// 2. jQuery
+// $(function(){
+//   $("#header").load("headerfile.html"); 
+//   $("#footer").load("footerfile.html"); 
+// });
+
+
+4. CSS Syntax
+all: initial|inherit|unset;
+
+Property Values
+Value:	Description
+initial:	Changes all the properties applied to the element or the element's parent to their initial value
+inherit:	Changes all the properties applied to the element or the element's parent to their parent value
+unset:	Changes all the properties applied to the element or the element's parent to their parent value if they are inheritable or to their initial value if not
+
+
+5. 이미지 배경 제거 사이트
+remove.bg
