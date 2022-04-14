@@ -41,3 +41,14 @@ unset:	Changes all the properties applied to the element or the element's parent
 
 5. 이미지 배경 제거 사이트
 remove.bg
+
+
+6. 
+The Differences Between
+innerHTML, innerText and textContent
+The innerHTML property returns:
+The text content of the element, including all spacing and inner HTML tags.
+The innerText property returns:
+Just the text content of the element and all its children, without CSS hidden text spacing and tags, except <script> and <style> elements.
+The textContent property returns:
+The text content of the element and all descendaces, with spacing and CSS hidden text, but without tags.
