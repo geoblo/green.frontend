@@ -1,0 +1,47 @@
+리액트 진도 시작!
+
+1. 개발환경 세팅
+1) node.js 설치
+
+node.js 특징 
+: 논-블로킹 IO
+- 블로킹: 막혀있다. 뭐 하나가 끝나야 다음걸 진행. 동기
+- 논-블로킹: 비동기
+
+https://nodejs.org/ko/docs/guides/blocking-vs-non-blocking/
+
+
+2) 간단한 node 서버 만들어보기
+express 설치 후 서버 구동
+
+3) npm vs yarn vs npx
+npm install 또는 npm i [옵션: --global 또는 -g]
+
+yarn 설치
+yarn --version 또는 yarn -v
+
+4)
+create-react-app 설치
+create-react-app --version
+
+npx create-react-app [프로젝트 이름]
+
+5) 리액트의 기본 구조 설명
+index.js app.js 등
+
+
+2. 리액트 이론 설명
+0) 리액트의 기본 동작 원리를 바닐라 스크립트로 구현 및 이해 
+
+1) React 와 ReactDOM
+React: 
+ReactDOM: 
+
+2) JSX
+: JS를 확장한 문법
+
+3) babel (CRA 할떄 자동 설치됨)
+: JSX로 작성된 코드를 순수 JS 코드로 변환
+
+4) 확장자 js, jsx 
+jsx 를 써야 jsx에 맞는 뭔가를 더 쓸수 있음?
