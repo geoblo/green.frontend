@@ -1,5 +1,5 @@
-import StartClass from './components/StartClass';
-import StartFunc from './components/StartFunc';
+import StartClass from "./components/StartClass";
+import StartFunc from "./components/StartFunc";
 
 function App() {
   return (
@@ -9,5 +9,14 @@ function App() {
     </>
   );
 }
+
+// const App = (props) => {
+//   return (
+//     <>
+//       <StartClass />
+//       <StartFunc />
+//     </>
+//   );
+// };
 
 export default App;
