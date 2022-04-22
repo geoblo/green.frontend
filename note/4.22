@@ -1,0 +1,58 @@
+1. 리액트에서 DOM을 직접적으로 건드려야할때
+1) 특정 input에 포커스를 주기 위해
+2) 스크롤 박스 조작을 위해
+3) canvas 요소에 그림 그리기 등
+
+
+2. ref 사용 방법
+1) 클래스형
+1-1) 콜백 함수
+1-2) createRef() (v16.3 이후 부터 사용가능)
+
+2) 함수형
+2-1) useRef()
+
+
+3. ref는 돔이 아닌 사용자 정의 컴포넌트에도 달 수 있다.
+=> 내부에 있는 돔을 외부에서 사용할 때 => 부모에서 자식의 함수를 사용하고 싶을 때
+
+
+4. 불변성 유지: 기존 상태를 그대로 두면서 새로운 값으로 데이터를 변경
+=> 왜 불변성 유지? 리액트의 동작 원리가 기존의 값과 새로 바뀐 값을 비교하기 때문에 기존값을 건드리면 안됨
+
+
+5. 배열을 렌더링 할때 key 값을 필수로 넣어줘야 한다!
+
+
+6. 컴포넌트가 업데이트 되는 시점
+1) props가 바뀔때
+2) state가 바뀔때
+3) 부모 컴포넌트가 리렌더링 될때
+4) this.forceUpdate로 강제 렌더링 시킬때 
+
+
+7. 라이프 사이클 메서드
+0) constructor
+컴포넌트를 만들때 처음 실행: 초기 state를 정할 수 있다.
+  
+1) getDerivedStateFromProps
+props로 받아온 값을 state에 동기화 시키는 작업을 할때
+(state를 변경 할 필요가 없다면 return null;)
+  
+2) render
+// 그려주는 함수: props와 state에 접근
+
+3) componentDidMount
+첫 렌더링을 마친 후 실행됨
+다른 라이브러리 프레임워크 함수 호출 혹은 이벤트를 등록, 네트워크 비동기 작업(axios, fetch 등)
+
+4) shouldComponentUpdate
+컴포넌트를 업데이트 해야만 하는가? 를 판단하는 메서드
+리턴값이 true이면 렌더링 진행, false 이면 중지
+
+5) getSnapshotBeforeUpdate
+주로 업데이트 하기 직전의 값을 참고할 때 사용
+
+6) componentDidUpdate
+컴포넌트가 업데이트 되었을 때
+getSnapshotBeforeUpdate 에서 리턴한 값을 3번째 파라미터 snapshot 으로 받아올 수 있다. 
