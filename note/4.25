@@ -86,3 +86,6 @@ ChatAPI.unsubscribeFromFriendStatus(300, handleStatusChange); // 마지막 effec
 : DOM 직접제어
 : 렌더링과 상관없는 지역변수 만들때
 (컴포넌트 안에서 조회 및 수정 할 수 있는 변수를 관리)
+
+
+7. 커스텀 훅 만들기 연습 (useInputs)
