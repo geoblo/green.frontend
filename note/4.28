@@ -1,0 +1,73 @@
+1. 리액트 라우터 돔
+1) 라우팅 방법 V6에서 조금 바뀜
+
+2) Link 컴포넌트와 a 태그의 차이 주의!
+Link 컴포넌트는 클릭하면 다른 주소로 이동시키는 컴포넌트입니다.
+리액트 라우터를 사용할땐 일반 <a href="...">...</a> 태그를 사용하시면 안됩니다.
+만약에 하신다면 onClick 에 e.preventDefault() 를 호출하고 따로 자바스크립트로 주소를 변환시켜주어야 합니다.
+그 대신에 Link 라는 컴포넌트를 사용해야하는데
+이유는 a 태그의 기본적인 속성은 페이지를 이동시키면서 페이지를 아예 새로 불러오게됩니다.
+그렇게 되면서 우리 리액트 앱이 지니고있는 상태들도 초기화되고, 렌더링된 컴포넌트도 모두 사라지고 새로 렌더링을 하게됩니다.
+그렇기 때문에 a 태그 대신에 Link 컴포넌트를 사용하는데요,
+이 컴포넌트는 HTML5 History API 를 사용하여 브라우저의 주소만 바꿀뿐 페이지를 새로 불러오지는 않습니다.
+
+3) url파라미터와 query string 다루기
+V6에서 query string 다루기가 가능해짐 (이전에는 qs 라이브러리 설치)
+
+4) 중첩 라우터
+Outlet 컴포넌트 사용법 등
+
+5) useNavigate()
+
+6) NavLink 컴포넌트
+
+7) Navigate 컴포넌트
+location.href 랑 비슷한 기능, 리다이렉트
+
+if (!isLoggedIn) {
+  return <Navigate to='/login' replace={true} />
+}
+replace={true} // 뒤로 갔다가 이동하는거라 보면 됨?
+
+참고: https://velog.io/@gwak2837/React-Router-History-push%EC%99%80-replace%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90
+
+
+2. Context API 써보기
+createContext: context 생성
+consumer(소비자): context 데이터 사용
+provider(제공자): context 데이터 변경
+
+
+
+
+
+
+
+궁금증
+1) 컴포넌트 밖에 선언한 변수들은 렌더링에 상관없는데 useRef 변수와의 차이점?
+2) set함수를 자식에 내려보내서 set 하는것과 
+부모에서 set를 갖고 조작하는 함수 자체를 만들어서 자식한테 내려보내 쓰는것이랑 차이점?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
