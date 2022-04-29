@@ -35,39 +35,6 @@ replace={true} // 뒤로 갔다가 이동하는거라 보면 됨?
 2. Context API 써보기
 createContext: context 생성
 consumer(소비자): context 데이터 사용
-provider(제공자): context 데이터 변경
-
-
-
-
-
-
-
-궁금증
-1) 컴포넌트 밖에 선언한 변수들은 렌더링에 상관없는데 useRef 변수와의 차이점?
-2) set함수를 자식에 내려보내서 set 하는것과 
-부모에서 set를 갖고 조작하는 함수 자체를 만들어서 자식한테 내려보내 쓰는것이랑 차이점?
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+provider(제공자): context 데이터 및 함수 제공, 데이터 변경
+hooks(useContext): 사용 가능하게 해줌
 

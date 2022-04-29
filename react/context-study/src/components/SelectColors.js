@@ -1,6 +1,7 @@
 import React from 'react';
-import { ColorConsumer } from '../contexts/color';
+import ColorContext, { ColorConsumer } from '../contexts/color';
 
+// Ref와 차이?
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 function SelectColors(props) {
@@ -8,7 +9,7 @@ function SelectColors(props) {
     <div>
       <h2>색상을 선택</h2>
       <ColorConsumer>
-        {actions => (
+        {({ actions }) => (
           <div style={{ display: 'flex' }}>
             {colors.map(color => (
               <div
