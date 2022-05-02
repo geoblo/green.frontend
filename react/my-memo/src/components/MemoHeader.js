@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const MemoHeaderWrapper = styled.div`
@@ -15,4 +16,4 @@ function MemoHeader(props) {
   );
 }
 
-export default MemoHeader;
+export default React.memo(MemoHeader);

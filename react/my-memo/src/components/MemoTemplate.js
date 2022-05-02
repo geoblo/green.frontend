@@ -1,4 +1,11 @@
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import MemoFooter from './MemoFooter';
+
+import MemoHeader from './MemoHeader';
+import MemoList from './MemoList';
+import MemoWrite from './MemoWrite';
+import { Outlet } from 'react-router-dom';
 
 const MemoTemplateWrapper = styled.div`
   width: 512px;
@@ -12,12 +19,16 @@ const MemoTemplateWrapper = styled.div`
   flex-direction: column;
 `;
 
-function MemoTemplate({ children }) {
+function MemoTemplate({ memos }) {
+  
+
   return (
     <MemoTemplateWrapper>
-      {children}
+      <MemoHeader />
+      {<Outlet />}
+      <MemoFooter count={memos.length} />
     </MemoTemplateWrapper>
   );
 }
 
-export default MemoTemplate;
+export default React.memo(MemoTemplate);

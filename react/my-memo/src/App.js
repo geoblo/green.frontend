@@ -1,11 +1,15 @@
-import { useState } from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import reset from 'styled-reset';
+import { Routes, Route } from 'react-router-dom';
 
 import MemoTemplate from './components/MemoTemplate';
-import MemoFooter from "./components/MemoFooter";
-import MemoHeader from "./components/MemoHeader";
+import MemoWrite from './components/MemoWrite';
 import MemoList from './components/MemoList';
+import { useState } from 'react';
+
+const theme = {
+  button: "#ffd43b",
+};
 
 const GlobalStyle = createGlobalStyle`
   ${reset};
@@ -78,11 +82,14 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <MemoTemplate>
-        <MemoHeader />
-        <MemoList memos={memos} setMemos={setMemos} />
-        <MemoFooter />
-      </MemoTemplate>
+      <ThemeProvider theme={theme}>
+        <Routes>
+          <Route element={<MemoTemplate memos={memos} />}>
+            <Route path="/" element={<MemoList memos={memos} setMemos={setMemos} />} />
+            <Route path="/write" element={<MemoWrite />} />
+          </Route>
+        </Routes>
+      </ThemeProvider>
     </>
   );
 }

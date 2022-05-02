@@ -1,9 +1,38 @@
-function MemoFooter(props) {
+import React from "react";
+import styled from "styled-components";
+
+import { BsPencilSquare as WriteIcon } from "react-icons/bs";
+import { Link } from "react-router-dom";
+
+const MemoFooterWrapper = styled.div`
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+`;
+
+const StyledWriteIcon = styled(WriteIcon)`
+  font-size: 1.25rem;
+  position: absolute;
+  right: 24px;
+  color: ${props => props.theme.button};
+  cursor: pointer;
+`;
+
+function MemoFooter({ count }) {
   return (
-    <div>
-      메모 작성 버튼 등
-    </div>
+    <MemoFooterWrapper>
+      {count} 개의 메모
+      <Link to="/write">
+        <StyledWriteIcon />
+      </Link>
+    </MemoFooterWrapper>
   );
 }
 
-export default MemoFooter;
+export default React.memo(MemoFooter);

@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import styled from "styled-components";
 import { 
   BsPinFill as PinIcon
@@ -58,7 +58,7 @@ function MemoList({ memos, setMemos }) {
           <MemoBox key={memo.id}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <p>{memo.title}</p>
-              <PinIcon size="0.8rem" color="yellow" onClick={() => handleToggleFixed(memo.id)} />
+              <PinIcon size="0.8rem" color="#ffd43b" onClick={() => handleToggleFixed(memo.id)} />
             </div>
             <hr />
             <span>{memo.desc}</span>
@@ -82,4 +82,4 @@ function MemoList({ memos, setMemos }) {
   );
 }
 
-export default memo(MemoList);
+export default React.memo(MemoList);
