@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import MemoFooter from './MemoFooter';
+import { Outlet } from 'react-router-dom';
 
 import MemoHeader from './MemoHeader';
-import MemoList from './MemoList';
-import MemoWrite from './MemoWrite';
-import { Outlet } from 'react-router-dom';
+import MemoFooter from './MemoFooter';
+
+import { useMemoState } from '../contexts/MemoContext';
 
 const MemoTemplateWrapper = styled.div`
   width: 512px;
@@ -19,8 +19,8 @@ const MemoTemplateWrapper = styled.div`
   flex-direction: column;
 `;
 
-function MemoTemplate({ memos }) {
-  
+function MemoTemplate() {
+  const { memos } = useMemoState();
 
   return (
     <MemoTemplateWrapper>

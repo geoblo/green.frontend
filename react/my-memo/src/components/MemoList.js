@@ -1,12 +1,15 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import styled from "styled-components";
 import { 
   BsPinFill as PinIcon
 } from "react-icons/bs";
 
+import { useMemoState, useMemoDispatch } from '../contexts/MemoContext';
+
 const MemoListWrapper = styled.div`
   height: 100vh;
   padding: 1.5rem;
+  overflow-y: overlay;
 `;
 
 const FixedMemoContainer = styled.div`
@@ -27,7 +30,7 @@ const MemoBox = styled.div`
   width: 31%;
   height: 100px;
   
-  background: #555555;
+  background: ${props => props.theme.memoBg};;
   border-radius: 6px;
   padding: .5rem;
 
@@ -39,16 +42,23 @@ const MemoBox = styled.div`
   }
 `;
 
-function MemoList({ memos, setMemos }) {
-  const handleToggleFixed = useCallback(id => {
-    console.log(id);
+function MemoList() {
+  const { memos, setMode } = useMemoState();
+  const dispatch = useMemoDispatch();
 
-    setMemos(memos => memos.map(memo => memo.id === id ? {
-      ...memo,
-      fixed: !memo.fixed
-    } : 
-    memo));
-  }, [setMemos]);
+  useEffect(() => {
+    setMode('LIST');
+  }, [setMode]);
+
+  const handleToggleFixed = useCallback(id => {
+    dispatch({ type: 'FIXED', id });
+
+    // setMemos(memos => memos.map(memo => memo.id === id ? {
+    //   ...memo,
+    //   fixed: !memo.fixed
+    // } : 
+    // memo));
+  }, [dispatch]);
 
   return (
     <MemoListWrapper>

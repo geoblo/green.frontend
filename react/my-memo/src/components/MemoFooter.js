@@ -19,6 +19,7 @@ const MemoFooterWrapper = styled.div`
 const StyledWriteIcon = styled(WriteIcon)`
   font-size: 1.25rem;
   position: absolute;
+  top: 12px;
   right: 24px;
   color: ${props => props.theme.button};
   cursor: pointer;
@@ -27,7 +28,7 @@ const StyledWriteIcon = styled(WriteIcon)`
 function MemoFooter({ count }) {
   return (
     <MemoFooterWrapper>
-      {count} 개의 메모
+      <span>{count} 개의 메모</span>
       <Link to="/write">
         <StyledWriteIcon />
       </Link>
