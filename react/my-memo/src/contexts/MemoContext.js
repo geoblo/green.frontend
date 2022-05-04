@@ -46,13 +46,13 @@ const initialMemos = [
   {
     id: 8,
     title: '스시 맛집',
-    desc: '영등포구청역 스시?',
+    desc: '이요이요스시, 이한스시, 스시우이, 고코로스시',
     fixed: false
   },
   {
     id: 9,
     title: '사고싶은 것',
-    desc: '급등주, 민턴 라켓',
+    desc: '급등주, 신상 라켓',
     fixed: false
   },
 ];

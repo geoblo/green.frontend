@@ -1,0 +1,13 @@
+* 컴포넌트 라우팅 리다이렉트
+https://explain-programming.tistory.com/5
+
+화면을 이동케하는 여러가지 장소들에게 문자열 대신에 location 객체를 제공할 수 있다.
+
+useNavigate()!!!
+
+
+Web Link to <Link to={location} />
+Native Link to <NavLink to={location} />
+Redirect to <Redirect to={location} />
+history.push history.push(location)
+history.replace history.replace(location)
