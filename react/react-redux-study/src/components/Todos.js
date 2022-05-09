@@ -6,7 +6,8 @@ function TodoItem({ todo, onToggle, onRemove }) {
     <div>
       <input 
         type="checkbox"
-        onClick={() => onToggle(todo.id)}
+        onClick ={() => onToggle(todo.id)}
+        // onChange ={() => onToggle(todo.id)}
         checked={todo.done}
         readOnly
       />
