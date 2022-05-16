@@ -1,0 +1,23 @@
+1. git hub 호스팅
+
+gh-pages 라는 브랜치를 만들어서 업로드
+github 설정에 pages에 깃헙 페이지에서 브랜치 설정 후 세이브하면 호스팅 완료
+주소가 나옴
+
+2. 리액트 프로젝트 호스팅 방법
+1) gh-pages 모듈 설치
+npm i gh-pages --save-dev
+
+2) package.json 작성
+"homepage": "https://geoblo.github.io/my-watcha/",
+
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+
+>> npm run deploy
+
+3) .env에서 경로수정을 위한 설정
+REACT_APP_HOST=my-watcha
+
+>> npm run deploy
+
