@@ -9,10 +9,12 @@ github 설정에 pages에 깃헙 페이지에서 브랜치 설정 후 세이브�
 npm i gh-pages --save-dev
 
 2) package.json 작성
-"homepage": "https://geoblo.github.io/my-watcha/",
+"homepage": "https://geoblo.github.io/my-watcha/", 
+==> optional 하다. 이걸 해주면 개발 서버 띄울때 자동으로 루트 뒤에 경로가 붙음
 
 "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+"deploy": "gh-pages -d build -b [브랜치명] --message [커밋 메시지]"
+==> 브랜치명 생략시 기본 gh-pages로 생성됨, 메시지 생략이 기본 Updates로 생성됨
 
 >> npm run deploy
 
