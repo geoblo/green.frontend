@@ -1,0 +1,94 @@
+1. https://nikgraf.github.io/react-hooks/
+: 다른 사람들이 만든 커스텀 훅들 모음
+
+
+2. 리액트 스타일링 방법 4가지
+1) 전통적인 CSS
+
+2) Sass(SCSS)
+: css 전처리기(전처리기의 자신만의 특별한 syntax를 가지고 CSS를 생성), css 확장 언어
+=>  css 파일을 작성하면서 생길 수 있는 여러 단점들을 다양한 연산들이나 기능으로 보완해 주는 것이 css 전처리기의 역할입니다.
+Sass, SCSS 등으로 작성된 파일들은 곧바로 웹에 적용될 수는 없습니다.
+웹은 기본적으로 css 파일로만 동작하기 때문에 이 파일들은 별도로 컴파일하는 과정을 거친 다음,
+css 파일로 변환하여 사용하게 됩니다.
+
+쓰는 이유: 
+CSS의 간결한 문법은 배우기 쉬우면서도 명확하다.
+프로젝트 초기에는 큰 문제 없다.
+하지만 프로젝트 규모가 커지면서 수정이 지속적으로 발생하면 코드가 복잡해지면서 유지보수가 어려워 지는 단점이 있다.
+이러한 CSS 한계를 보완 하기 위해 사용 할수 있는 CSS 전처리기(Preprocessor)를 사용한다.
+
+장점: 
+개발적인 측면에서 유지보수성과 동일한 스타일을 적용해야하는 대상을 보다 쉽게 관리할 수 있기 때문
+$변수, Nesting, @mixin, @import, @if, @for 등 여러가지 확장된 기능
+CSS의 문제점들을 Programmatically 한 방식. 즉 변수, 함수, 상속 등 일반적인 프로그래밍 개념을 사용가능( 전처리기는 태생적으로 기존 css가 가질 수 있는 불리한 점 해결 위해 탄생)
+재사용성: 공통 요소 또는 반복적인 항목을 변수, 함수로 대체 가능
+시간적 비용 감소: 임의 함수 및 내장 함수로 인한 개발 시간적 비용 절약
+유지 관리: CSS코드를 여러 파일로 나눠 유지 보수성 향상, 연산, 중첩, 상속과 같은 요소로 인해 구조화된 코드로 유지 및 관리 용이
+Learning curve 낮음
+
+단점:
+전처리기를 위한 도구 필요
+
+참고: 
+SCSS는 SASS 세번째 버전에서 추가되었는데 SASS의 모든 기능을 지원하면서 CSS 구문과 완전히 호환되도록 만들어졌다.
+https://heropy.blog/2018/01/31/sass/
+https://sass-lang.com/guide
+https://jinminkim-50502.medium.com/css-preprocessor-sass-scss-25dc8329f867
+
+2-1) 같이 쓰면 유용한 라이브러리
+"include-media" => 미디어 쿼리 관련 라이브러리
+"open-color" => 컬러 관련 라이브러리
+
+3) CSS Module
+장점: 
+클래스 이름 지을때 고유성에 대한 고민을 덜 하게 됨 (파일이름_클래스이름_해시값)
+컴포넌트가 스타일 오염이 안됨 (스타일 충돌이 안됨)
+
+예:
+<div class="CSSModule_wrapper__bAimx">안녕하세요. 저는 <span class="something">css module!</span></div>
+
+3-1) 같이 쓰면 유용한 라이브러리
+"classnames" => https://www.npmjs.com/package/classnames
+
+3-2) CSS Module + Sass(SCSS) 도 가능!
+
+4) styled-components
+장점: props를 값으로 전달해 줄 수 있다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
