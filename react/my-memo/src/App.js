@@ -14,7 +14,7 @@ const theme = {
 };
 
 const GlobalStyle = createGlobalStyle`
-  ${reset};
+  ${reset}
 
   body {
     color: white;
